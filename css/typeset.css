@@ -1,0 +1,12 @@
+.typeset_left {
+    position: fixed;
+    overflow: auto;
+    max-height: 100%;
+    top: 55px;
+    bottom: 40px;
+}
+
+.typeset_right {
+    float: right;
+}
+
