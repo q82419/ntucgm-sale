@@ -1,0 +1,190 @@
+div[class^=productlist_] {
+    float: left;
+}
+
+.productlisthead,{
+    width: 100%;
+    height: 40px;
+}
+
+.productlisthead .productlistbutton {
+    float: left;
+    margin: 5px;
+    display: block;
+    width: 90px;
+}
+
+.productlisthead .productlistbutton a {
+    line-height: 30px;
+    display: block;
+}
+
+/* For Gallery Mode */
+.productlist_g .productlistitem {
+    display: block;
+    width: 182px;
+    margin: 5px;
+    float: left;
+    border-radius: 3px;
+}
+
+.productlist_g .productlistitem:hover {
+    -moz-box-shadow:0px 1px 3px rgba(40%, 40%, 40%, 0.5);
+    -webkit-box-shadow:0px 1px 3px rgba(40%, 40%, 40%, 0.5);
+    box-shadow:0px 1px 3px rgba(40%, 40%, 40%, 0.5);
+}
+
+.productlist_g .productlistitem .productlistitem_pic {
+    background: url(../images/logo.png);
+    background-size: cover;
+    margin: 10px;
+    width: 162px;
+    height: 162px;
+}
+
+.productlist_g .productlistitem .productlistitem_code,
+.productlist_g .productlistitem .productlistitem_rare,
+.productlist_g .productlistitem .productlistitem_title, 
+.productlist_g .productlistitem .productlistitem_num, 
+.productlist_g .productlistitem .productlistitem_mode, 
+.productlist_g .productlistitem .productlistitem_price {
+    line-height: 18px;
+    font-size: 13px;
+}
+
+.productlist_g .productlistitem .productlistitem_code,
+.productlist_g .productlistitem .productlistitem_rare,
+.productlist_g .productlistitem .productlistitem_num, 
+.productlist_g .productlistitem .productlistitem_mode, 
+.productlist_g .productlistitem .productlistitem_price {
+    color: #ffffff;
+    height: 18px;
+}
+
+.productlist_g .productlistitem .productlistitem_code,
+.productlist_g .productlistitem .productlistitem_num,
+.productlist_g .productlistitem .productlistitem_title {
+    float: left;
+    margin-left: 10px;
+}
+.productlist_g .productlistitem .productlistitem_rare,
+.productlist_g .productlistitem .productlistitem_price {
+    float: right;
+    margin-right: 10px;
+}
+.productlist_g .productlistitem .productlistitem_code,
+.productlist_g .productlistitem .productlistitem_rare,
+.productlist_g .productlistitem .productlistitem_title {
+    margin-bottom: 5px;
+}
+.productlist_g .productlistitem .productlistitem_num, 
+.productlist_g .productlistitem .productlistitem_mode, 
+.productlist_g .productlistitem .productlistitem_price {
+    margin-bottom: 10px;
+}
+
+.productlist_g .productlistitem .productlistitem_code {
+    background: #b06969;
+    font-family: Courier, monospace;
+    width: 90px;
+}
+.productlist_g .productlistitem .productlistitem_rare {
+    background: #dbc157;
+    width: 40px;
+}
+.productlist_g .productlistitem .productlistitem_title {
+    text-align: left;
+    clear: both;
+    word-break: break-all;
+    width: 162px;
+    height: 36px;
+}
+.productlist_g .productlistitem .productlistitem_num {
+    background: #5cd65c;
+    width: 35px;
+}
+.productlist_g .productlistitem .productlistitem_mode {
+    float: right;
+    background: #3366ff;
+    /* red: .ff3333     blue: .3366ff*/
+    margin-right: 5px;
+    width: 33px;
+}
+.productlist_g .productlistitem .productlistitem_price {
+    background: #ff8533;
+    width: 45px;
+}
+
+
+/* For List Mode */
+.productlist_l {
+    border-bottom: 1px solid;
+    margin: 5px;
+}
+.productlist_l .productlistitem {
+    border-top: 1px solid;
+    display: block;
+    width: 950px;
+    height: 30px;
+    float: left;
+}
+
+.productlist_l .productlistitem .productlistitem_code,
+.productlist_l .productlistitem .productlistitem_rare,
+.productlist_l .productlistitem .productlistitem_title, 
+.productlist_l .productlistitem .productlistitem_num, 
+.productlist_l .productlistitem .productlistitem_mode, 
+.productlist_l .productlistitem .productlistitem_price {
+    line-height: 20px;
+    height: 20px;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.productlist_l .productlistitem .productlistitem_code,
+.productlist_l .productlistitem .productlistitem_rare,
+.productlist_l .productlistitem .productlistitem_num, 
+.productlist_l .productlistitem .productlistitem_mode, 
+.productlist_l .productlistitem .productlistitem_price {
+    color: #ffffff;
+}
+
+.productlist_l .productlistitem .productlistitem_code,
+.productlist_l .productlistitem .productlistitem_rare,
+.productlist_l .productlistitem .productlistitem_title {
+    float: left;
+    margin-left: 10px;
+}
+.productlist_l .productlistitem .productlistitem_num, 
+.productlist_l .productlistitem .productlistitem_mode, 
+.productlist_l .productlistitem .productlistitem_price {
+    float: right;
+    margin-right: 10px;
+}
+
+.productlist_l .productlistitem .productlistitem_code {
+    background: #b06969;
+    font-family: Courier, monospace;
+    width: 100px;
+}
+.productlist_l .productlistitem .productlistitem_rare {
+    background: #dbc157;
+    width: 45px;
+}
+.productlist_l .productlistitem .productlistitem_title {
+}
+.productlist_l .productlistitem .productlistitem_num {
+    background: #5cd65c;
+    width: 35px;
+}
+.productlist_l .productlistitem .productlistitem_mode {
+    background: #3366ff;
+    /* red: .ff3333     blue: .3366ff*/
+    width: 33px;
+}
+.productlist_l .productlistitem .productlistitem_price {
+    background: #ff8533;
+    width: 45px;
+}
+

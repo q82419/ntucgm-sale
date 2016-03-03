@@ -1,0 +1,35 @@
+#searchmain {
+    line-height: 30px;
+}
+
+#searchmain input {
+    float: left;
+    margin: 0 5px 0 5px;
+    height: 30px;
+}
+
+#searchmain #searchmaintext {
+    width: 400px;
+}
+
+#searchmain #searchmaintype {
+    width: 150px;
+}
+
+#searchmain #searchmainsubmit {
+    float: left;
+    margin: 0 0 0 5px;
+    width: 60px;
+}
+
+#searchmain .searchmainbutton {
+    float: right;
+    margin: 0 5px 0 5px;
+    display: block;
+    width: 90px;
+}
+
+#searchmain a {
+    display: block;
+}
+
