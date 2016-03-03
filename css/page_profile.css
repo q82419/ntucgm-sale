@@ -1,0 +1,64 @@
+h1 {
+    font-size: 30px;
+    color: #134353;
+    margin-bottom: 30px;
+}
+
+label {
+    margin-right: 20px;
+}
+
+input, a {
+    color: #134353;
+}
+
+input[type=text] {
+    width: 300px;
+    float: left;
+    height: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background: #c1e5f0;
+}
+
+input[type=submit] {
+    width: 100px;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    background: #acdcec;
+}
+
+input[type=text]:hover, input[type=text]:focus, input[type=submit]:hover{
+    background: #acdcec;
+}
+
+input[type=submit]:hover{
+    background: #83cae2;
+}
+
+.panel {
+    background: #eaf6fa;
+    padding: 20px;
+}
+
+.listview_type2 {
+    width: 450px;
+    color: #134353;
+    border-color: #acdcec;
+}
+
+.listview_type2 .listviewentry {
+    border-color: #acdcec;
+}
+
+.listview_type2 .listviewentry:hover {
+    background: #d6edf5;
+}
+
+.listview_type2 .listviewentry .listviewlabel{
+    text-align: left;
+    width: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+}

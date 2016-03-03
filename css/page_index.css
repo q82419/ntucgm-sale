@@ -1,0 +1,37 @@
+.panel {
+    background: #eafaf5;
+}
+
+#searchmain input,
+#searchmain a,
+.productlisthead .productlistbutton a,
+div[class^=productlist_] .productlistitem {
+    color: #14523e;
+}
+
+#searchmain input,
+.productlist_g .productlistitem {
+    background: #d6f5eb;
+}
+
+#searchmain input:hover, #searchmain input:focus,
+#searchmain a,
+.productlisthead .productlistbutton a {
+    background: #c1f0e1;
+}
+
+#searchmain a:hover,
+.productlisthead .productlistbutton a:hover {
+    background: #84e1c4;
+}
+.productlist_g .productlistitem:hover {
+    background: #adebd7;
+}
+.productlist_l .productlistitem:hover {
+    background: #d6f5eb;
+}
+
+.productlist_l,
+.productlist_l .productlistitem {
+    border-color: #6fdcba;
+}

@@ -1,0 +1,100 @@
+h1 {
+    font-size: 30px;
+    color: #4e1818;
+    margin-bottom: 10px;
+}
+
+label {
+    margin-right: 20px;
+}
+
+.panel {
+    background: #f9ecec;
+    padding: 20px;
+}
+
+.listview_head , input, a {
+    color: #4e1818;
+}
+
+input[type=text] {
+    width: 180px;
+    float: left;
+    height: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background: #edc4c4;
+}
+
+input[type=button] {
+    background: #e7b1b1;
+}
+
+input[type=text]:hover, input[type=text]:focus {
+    background: #e7b1b1;
+}
+
+input[type=button]:hover{
+    background: #db8a8a;
+}
+
+input[id=submit_signup] {
+    width: 100px;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#set_permission {
+    width: 330px;
+}
+#set_permission .listviewentry .listviewlabel {
+    width: 100px;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#set_application {
+    width: 940px;
+}
+
+.listview_head div,
+#set_application .listviewentry div[class^=listviewlabel_] {
+    margin-left: 10px;
+}
+.listviewlabel_fb {
+    width: 45px;
+}
+.listviewlabel_name {
+    width: 70px;
+}
+div[class^=listviewlabel_ptt] {
+    width: 130px;
+}
+.listviewlabel_tel {
+    width: 100px;
+}
+.listviewlabel_email {
+    width: 270px;
+    margin-right: 5px;
+}
+
+#set_application .listviewinput input[type=button] {
+    width: 50px;
+    margin-right: 5px;
+}
+
+.listview_type2 {
+    color: #4e1818;
+    border-color: #e7b1b1;
+}
+
+.listview_type2 .listviewentry {
+    border-color: #e7b1b1;
+}
+
+.listview_type2 .listviewentry:hover {
+    background: #f3d8d8;
+}
+

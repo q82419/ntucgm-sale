@@ -1,0 +1,32 @@
+h1 {
+    font-size: 30px;
+    color: #5e3d08;
+    margin-bottom: 10px;
+}
+
+.panel {
+    background: #fdf5e8;
+    padding: 20px;
+}
+
+.listview_type1 {
+    width: 900px;
+    border-color: #f7d5a1;
+}
+
+.listview_type1 .listviewentry {
+    border-color: #f7d5a1;
+}
+
+.listview_type1 .listviewdate {
+    background: #c58315;
+    color: #ffffff;
+}
+
+.listview_type1 .listviewcontent {
+    color: #5e3d08;
+}
+
+.listview_type1 .listviewentry:hover {
+    background: #fbead0;
+}

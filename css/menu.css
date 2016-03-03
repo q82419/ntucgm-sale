@@ -1,0 +1,81 @@
+
+/* Positions */
+#menuinner {
+    margin: 0 auto;
+    width: 1000px;
+    line-height: 35px;
+}
+
+#menuinner ul li {
+    list-style-type: none;
+    float: left;
+    margin: 10 0 10 10;
+}
+
+
+#menuinner #menulogin, #menuinner #menulogname{
+    float: right;
+    margin: 10 10 10 0;
+}
+
+/* Styles */
+#menuinner ul li a[id$=on], #menuinner #menulogname {
+    color: #ffffff;
+}
+
+#menuinner ul li a:not([id$=on]), #menuinner #menulogin a {
+    color: #cccccc;
+}
+
+#menuinner ul li a, #menuinner #menulogin a, #menuinner #menulogname {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -moz-transition: background 0.5s, -moz-box-shadow 0.5s, color 0.5s;
+    -webkit-transition: background 0.5s, -webkit-box-shadow 0.5s, color 0.5s;
+    transition: background 0.5s, box-shadow 0.5s, color 0.5s;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: block;
+}
+
+#menuinner ul li a {
+    width: 70px;
+}
+#menuinner #menulogin a {
+    width: 40px;
+}
+#menuinner #menulogname, #menuinner #menulogin a{
+    background: #404040;
+}
+
+#menuinner ul li a:hover, #menuinner #menulogin a:hover, #menuinner #menulogname:hover{
+    -moz-box-shadow:0px 2px 5px rgba(10%, 10%, 10%, 0.7);
+    -webkit-box-shadow:0px 2px 5px rgba(10%, 10%, 10%, 0.7);
+    box-shadow:0px 2px 5px rgba(10%, 10%, 10%, 0.7);
+    display: block;
+    color: #ffffff;
+}
+
+#menuinner ul li #menubutton_f_on, #menuinner ul li #menubutton_f:hover {
+    background: #259876;
+}
+#menuinner ul li #menubutton_e_on, #menuinner ul li #menubutton_e:hover {
+    background: #c58315;
+}
+#menuinner ul li #menubutton_m_on, #menuinner ul li #menubutton_m:hover {
+    background: #a43737;
+}
+#menuinner ul li #menubutton_c_on, #menuinner ul li #menubutton_c:hover {
+    background: #596ee4;
+}
+#menuinner ul li a[id^=menubutton_b][id$=_on], #menuinner ul li a[id^=menubutton_b]:hover {
+    background: #2b8faf;
+}
+#menuinner #menulogin a:hover {
+    background: #a659c0;
+}
+#menuinner #menulogname:hover {
+    background: #484848;
+}
