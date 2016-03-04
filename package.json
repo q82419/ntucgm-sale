@@ -1,0 +1,49 @@
+{
+  "name": "test_react_and_redux",
+  "version": "1.0.0",
+  "description": "社內賣卡競標",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha -R good-mocha-html-reporter"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/y2468101216/ntucgm-sale.git"
+  },
+  "keywords": [
+    "react",
+    "redux"
+  ],
+  "author": "Yun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/y2468101216/ntucgm-sale/issues"
+  },
+  "homepage": "https://github.com/y2468101216/ntucgm-sale#readme",
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "good-mocha-html-reporter": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^2.3.1",
+    "gulp-typescript": "^2.11.0",
+    "mocha": "^2.4.5",
+    "node-sass": "^3.4.2",
+    "object-assign": "^4.0.1",
+    "pm2": "^1.0.1",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "ts-loader": "^0.8.1",
+    "typescript": "^1.8.7",
+    "typings": "^0.6.8",
+    "webpack": "^1.12.13",
+    "zombie": "^4.2.1"
+  },
+  "dependencies": {
+    "classnames": "^2.2.3",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-redux": "^4.4.0",
+    "redux": "^3.3.1"
+  }
+}
