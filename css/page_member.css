@@ -2,6 +2,22 @@ a {
     display: block;
 }
 
+div[id^=page_member_menu] .listviewentry {
+    height: 20px;
+    font-size: 14px;
+    line-height: 20px;
+}
+div[id^=page_member_buy] .listviewentry,
+div[id^=page_member_sale] .listviewentry {
+    height: 30px;
+    line-height: 30px;
+}
+
+div[id^=page_member_buy] .listviewentry a:hover,
+div[id^=page_member_sale] .listviewentry a:hover {
+    text-decoration: underline;
+}
+
 .panel_ext1#page_member_menu1,
 .panel_ext1[id^=page_member_buy] {
     background: #eafaf5;
@@ -35,6 +51,18 @@ a {
     color: #134353;
 }
 
+.panel_ext1#page_member_menu1 .listview_type0 .listviewentry a,
+.panel_ext1[id^=page_member_buy] .listview_head,
+.panel_ext1[id^=page_member_buy] .listviewentry a {
+    color: #14523e;
+}
+
+.panel_ext1#page_member_menu2 .listview_type0 .listviewentry a,
+.panel_ext1[id^=page_member_sale] .listview_head,
+.panel_ext1[id^=page_member_sale] .listviewentry a {
+    color: #134353;
+}
+
 .typeset_left {
     width: 145px;
 }
@@ -44,27 +72,27 @@ a {
 }
 
 .panel_ext1#page_member_menu1 .listview_type0,
-.panel_ext1#page_member_menu1 .listview_type0 .listviewentry {
+.panel_ext1#page_member_menu1 .listview_type0 .listviewentry,
+.panel_ext1[id^=page_member_buy] .listview_type0,
+.panel_ext1[id^=page_member_buy] .listview_type0 .listviewentry {
     border-color: #6fdcba;
 }
 
-.panel_ext1#page_member_menu1 .listview_type0 .listviewentry:hover {
+.panel_ext1#page_member_menu1 .listview_type0 .listviewentry:hover,
+.panel_ext1[id^=page_member_buy] .listview_type0 .listviewentry:hover {
     background: #d6f5eb;
 }
 
-.listview_type0 .listviewentry a {
-    color: #14523e;
-}
 
 .panel_ext1#page_member_menu2 .listview_type0,
-.panel_ext1#page_member_menu2 .listview_type0 .listviewentry {
+.panel_ext1#page_member_menu2 .listview_type0 .listviewentry,
+.panel_ext1[id^=page_member_sale] .listview_type0,
+.panel_ext1[id^=page_member_sale] .listview_type0 .listviewentry {
     border-color: #6ec1dd;
 }
 
-.panel_ext1#page_member_menu2 .listview_type0 .listviewentry:hover {
+.panel_ext1#page_member_menu2 .listview_type0 .listviewentry:hover,
+.panel_ext1[id^=page_member_sale] .listview_type0 .listviewentry:hover {
     background: #d6edf5;
 }
 
-.panel_ext1#page_member_menu2 .listview_type0 .listviewentry a {
-    color: #134353;
-}

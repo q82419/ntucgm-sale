@@ -2,6 +2,7 @@ div[class^=productlist_] {
     float: left;
 }
 
+/* List Head Typesetting */
 .productlisthead,{
     width: 100%;
     height: 40px;
@@ -17,6 +18,46 @@ div[class^=productlist_] {
 .productlisthead .productlistbutton a {
     line-height: 30px;
     display: block;
+}
+
+
+/* Color and Background */
+div[class^=product]:not([class$=_title]) {
+    color: #ffffff;
+}
+div[class^=product][class$=_code] {
+    background: #b06969;
+    font-family: Courier, monospace;
+}
+div[class^=product][class$=_rare] {
+    background: #dbc157;
+}
+div[class^=product][class$=_num] {
+    background: #5cd65c;
+}
+div[class^=product][class$=_price] {
+    background: #ff8533;
+}
+div[class^=product][class$=_order_mode] {
+    background: #3366ff;
+}
+div[class^=product][class$=_bid_mode] {
+    background: #ff3333;
+}
+div[class^=product][class$=_normal_status] {
+    background: #4ae07a;
+}
+div[class^=product][class$=_warning_status] {
+    background: #ff4dc6;
+}
+div[class^=product][class$=_time] {
+    background: #a6a6a6;
+}
+
+
+
+.product_buyer,
+.product_saler {
 }
 
 /* For Gallery Mode */
@@ -46,7 +87,8 @@ div[class^=productlist_] {
 .productlist_g .productlistitem .productlistitem_rare,
 .productlist_g .productlistitem .productlistitem_title, 
 .productlist_g .productlistitem .productlistitem_num, 
-.productlist_g .productlistitem .productlistitem_mode, 
+.productlist_g .productlistitem .productlistitem_order_mode, 
+.productlist_g .productlistitem .productlistitem_bid_mode, 
 .productlist_g .productlistitem .productlistitem_price {
     line-height: 18px;
     font-size: 13px;
@@ -55,9 +97,9 @@ div[class^=productlist_] {
 .productlist_g .productlistitem .productlistitem_code,
 .productlist_g .productlistitem .productlistitem_rare,
 .productlist_g .productlistitem .productlistitem_num, 
-.productlist_g .productlistitem .productlistitem_mode, 
+.productlist_g .productlistitem .productlistitem_order_mode, 
+.productlist_g .productlistitem .productlistitem_bid_mode, 
 .productlist_g .productlistitem .productlistitem_price {
-    color: #ffffff;
     height: 18px;
 }
 
@@ -78,18 +120,16 @@ div[class^=productlist_] {
     margin-bottom: 5px;
 }
 .productlist_g .productlistitem .productlistitem_num, 
-.productlist_g .productlistitem .productlistitem_mode, 
+.productlist_g .productlistitem .productlistitem_order_mode, 
+.productlist_g .productlistitem .productlistitem_bid_mode, 
 .productlist_g .productlistitem .productlistitem_price {
     margin-bottom: 10px;
 }
 
 .productlist_g .productlistitem .productlistitem_code {
-    background: #b06969;
-    font-family: Courier, monospace;
     width: 90px;
 }
 .productlist_g .productlistitem .productlistitem_rare {
-    background: #dbc157;
     width: 40px;
 }
 .productlist_g .productlistitem .productlistitem_title {
@@ -100,18 +140,15 @@ div[class^=productlist_] {
     height: 36px;
 }
 .productlist_g .productlistitem .productlistitem_num {
-    background: #5cd65c;
     width: 35px;
 }
-.productlist_g .productlistitem .productlistitem_mode {
+.productlist_g .productlistitem .productlistitem_order_mode,
+.productlist_g .productlistitem .productlistitem_bid_mode {
     float: right;
-    background: #3366ff;
-    /* red: .ff3333     blue: .3366ff*/
     margin-right: 5px;
     width: 33px;
 }
 .productlist_g .productlistitem .productlistitem_price {
-    background: #ff8533;
     width: 45px;
 }
 
@@ -133,7 +170,8 @@ div[class^=productlist_] {
 .productlist_l .productlistitem .productlistitem_rare,
 .productlist_l .productlistitem .productlistitem_title, 
 .productlist_l .productlistitem .productlistitem_num, 
-.productlist_l .productlistitem .productlistitem_mode, 
+.productlist_l .productlistitem .productlistitem_order_mode, 
+.productlist_l .productlistitem .productlistitem_bid_mode, 
 .productlist_l .productlistitem .productlistitem_price {
     line-height: 20px;
     height: 20px;
@@ -144,47 +182,83 @@ div[class^=productlist_] {
 
 .productlist_l .productlistitem .productlistitem_code,
 .productlist_l .productlistitem .productlistitem_rare,
-.productlist_l .productlistitem .productlistitem_num, 
-.productlist_l .productlistitem .productlistitem_mode, 
-.productlist_l .productlistitem .productlistitem_price {
-    color: #ffffff;
-}
-
-.productlist_l .productlistitem .productlistitem_code,
-.productlist_l .productlistitem .productlistitem_rare,
 .productlist_l .productlistitem .productlistitem_title {
     float: left;
     margin-left: 10px;
 }
 .productlist_l .productlistitem .productlistitem_num, 
-.productlist_l .productlistitem .productlistitem_mode, 
+.productlist_l .productlistitem .productlistitem_order_mode, 
+.productlist_l .productlistitem .productlistitem_bid_mode, 
 .productlist_l .productlistitem .productlistitem_price {
     float: right;
     margin-right: 10px;
 }
 
-.productlist_l .productlistitem .productlistitem_code {
-    background: #b06969;
-    font-family: Courier, monospace;
+.productlist_l .productlistitem .productlistitem_code,
+.product_code {
     width: 100px;
 }
-.productlist_l .productlistitem .productlistitem_rare {
-    background: #dbc157;
+.productlist_l .productlistitem .productlistitem_rare,
+.product_rare {
     width: 45px;
 }
 .productlist_l .productlistitem .productlistitem_title {
 }
-.productlist_l .productlistitem .productlistitem_num {
-    background: #5cd65c;
+.productlist_l .productlistitem .productlistitem_num,
+.product_num {
     width: 35px;
 }
-.productlist_l .productlistitem .productlistitem_mode {
-    background: #3366ff;
-    /* red: .ff3333     blue: .3366ff*/
+.productlist_l .productlistitem .productlistitem_order_mode,
+.productlist_l .productlistitem .productlistitem_bid_mode,
+.product_order_mode,
+.product_bid_mode {
     width: 33px;
 }
-.productlist_l .productlistitem .productlistitem_price {
-    background: #ff8533;
+.productlist_l .productlistitem .productlistitem_price,
+.product_price,
+.product_my_price,
+.product_end_price,
+.product_total_price {
     width: 45px;
 }
+.product_normal_status,
+.product_warning_status {
+    width: 80px;
+}
+.product_timeend,
+.product_timeremain {
+}
 
+
+/* Normally Use in Lists */
+.product_code,
+.product_rare,
+.product_title, 
+.product_num, 
+.product_order_mode, 
+.product_bid_mode, 
+.product_normal_status, 
+.product_warning_status, 
+.product_price,
+.product_my_price,
+.product_end_price,
+.product_total_price,
+.product_end_time,
+.product_remain_time,
+.product_buyer,
+.product_saler,
+.product_trace_cancel,
+.product_deal_cancel,
+.product_cancel_ack,
+.product_receive_ack,
+.product_on_item,
+.product_off_item,
+.product_send_ack {
+    line-height: 20px;
+    height: 20px;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    float: left;
+    margin-left: 10px;
+}
