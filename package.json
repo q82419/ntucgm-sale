@@ -23,10 +23,12 @@
   "devDependencies": {
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
     "good-mocha-html-reporter": "^2.0.0",
     "gulp": "^3.9.1",
     "gulp-connect": "^2.3.1",
     "gulp-typescript": "^2.11.0",
+    "image-webpack-loader": "^1.6.3",
     "mocha": "^2.4.5",
     "node-sass": "^3.4.2",
     "object-assign": "^4.0.1",
@@ -36,6 +38,7 @@
     "ts-loader": "^0.8.1",
     "typescript": "^1.8.7",
     "typings": "^0.6.8",
+    "url-loader": "^0.5.7",
     "webpack": "^1.12.13",
     "zombie": "^4.2.1"
   },

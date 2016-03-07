@@ -35,7 +35,7 @@ gulp.task('connectDev', function () {
 });
 
 gulp.task('reloadIndex', function(done){
-    var stream = gulp.src('index.html')
+    var stream = gulp.src('public/app.html')
     .pipe(connect.reload());
     
      stream.on('end',function(){
@@ -53,8 +53,9 @@ gulp.task('reloadReport', function(){
 gulp.task('auto', function(){
    gulp.watch('report.html',['reloadReport']);
    gulp.watch('built/app.js',['reloadIndex','test']);
-   gulp.watch('react/*.tsx',['webpack']);
-   gulp.watch('redux/*.ts',['complie','webpack']);
+   gulp.watch('ts/react/*.tsx',['webpack']);
+   gulp.watch('css/*.css',['webpack']);
+   gulp.watch('ts/redux/*.ts',['complie','webpack']);
    gulp.watch('test/*.js',['test']);
 });
 

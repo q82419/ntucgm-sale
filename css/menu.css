@@ -2,6 +2,7 @@
 /* Positions */
 #menuinner {
     margin: 0 auto;
+    margin-top: 10px;
     width: 1000px;
     line-height: 35px;
 }
@@ -42,6 +43,8 @@
 
 #menuinner ul li a {
     width: 70px;
+    margin-left:10px;
+    
 }
 #menuinner #menulogin a {
     width: 40px;
