@@ -4,7 +4,7 @@
 
 #searchmain input,
 #searchmain a,
-.productlisthead .productlistbutton a,
+.listviewhead a,
 div[class^=productlist_] .productlistitem {
     color: #14523e;
 }
@@ -16,14 +16,33 @@ div[class^=productlist_] .productlistitem {
 
 #searchmain input:hover, #searchmain input:focus,
 #searchmain a,
-.productlisthead .productlistbutton a {
+.listviewhead .productlistbutton a {
     background: #c1f0e1;
 }
 
 #searchmain a:hover,
-.productlisthead .productlistbutton a:hover {
+.listviewhead .productlistbutton a:hover {
     background: #84e1c4;
 }
+
+
+.listviewhead,{
+    width: 100%;
+    height: 40px;
+}
+
+.listviewhead .productlistbutton {
+    float: left;
+    margin: 5px;
+    display: block;
+    width: 90px;
+}
+
+.listviewhead .productlistbutton a {
+    line-height: 30px;
+    display: block;
+}
+
 .productlist_g .productlistitem:hover {
     background: #adebd7;
 }

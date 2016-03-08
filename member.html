@@ -35,10 +35,10 @@
         <!-- Page Content -->
         <div id="content">
             <div class="typeset_left">
-                <div class="panel_ext1" id="page_member_menu1">
+                <div class="panel panel panel_ext1" id="page_member_menu1">
                     <div class="panelhead">我是買家</div>
                     <div class="panelcontent">
-                        <div class="listview_type0">
+                        <div class="listview">
                             <div class="listviewentry"><a href="#page_member_buy1">競標中</a></div>
                             <div class="listviewentry"><a href="#page_member_buy2">追蹤中</a></div>
                             <div class="listviewentry"><a href="#page_member_buy3">已得標</a></div>
@@ -50,10 +50,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="panel_ext1" id="page_member_menu2">
+                <div class="panel panel panel_ext1" id="page_member_menu2">
                     <div class="panelhead">我是賣家</div>
                     <div class="panelcontent">
-                        <div class="listview_type0">
+                        <div class="listview">
                             <div class="listviewentry"><a href="#page_member_sale1">已上架</a></div>
                             <div class="listviewentry"><a href="#page_member_sale2">交易進行中</a></div>
                             <div class="listviewentry"><a href="#page_member_sale3">等待領收</a></div>
@@ -65,11 +65,24 @@
                         </div>
                     </div>
                 </div>
+                <div class="panel panel panel_ext1" id="page_member_menu3">
+                    <div class="panelhead">統計記錄</div>
+                    <div class="panelcontent">
+                        <div class="listview">
+                            <div class="listviewentry" id="page_member_menu3_in">支出：999999</div>
+                            <div class="listviewentry" id="page_member_menu3_out">收入：0</div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="typeset_right">
-                <div class="panel_ext1" id="page_member_buy1">
-                    <div class="panelhead">競標中</div>
+                <div class="panel panel panel_ext1" id="page_member_buy1">
+                    <div class="panelhead">
+                        <a id="page_member_buy1_show" href="#">﹣</a>
+                        <div id="page_member_buy1_num">[0]</div>
+                        <div id="page_member_buy1_title">競標中</div>
+                    </div>
                     <div class="panelcontent">
                         <div class="listview_head">
                             <div class="listviewhead_code">卡號</div>
@@ -81,7 +94,7 @@
                             <div class="listviewhead_end_time">結標日期時間</div>
                             <div class="listviewhead_remain_time">剩餘時間</div>
                         </div>
-                        <div class="listview_type0">
+                        <div class="listview">
                             <div class="listviewentry">
                                 <div class="product_code">GP16-JP001</div>
                                 <div class="product_rare">GSE</div>
@@ -105,8 +118,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="panel_ext1" id="page_member_buy2">
-                    <div class="panelhead">追蹤中</div>
+                <div class="panel panel panel_ext1" id="page_member_buy2">
+                    <div class="panelhead">
+                        <a id="page_member_buy2_show" href="#">﹣</a>
+                        <div id="page_member_buy2_num">[0]</div>
+                        <div id="page_member_buy2_title">追蹤中</div>
+                    </div>
                     <div class="panelcontent">
                         <div class="listview_head">
                             <div class="listviewhead_code">卡號</div>
@@ -117,7 +134,7 @@
                             <div class="listviewhead_price">現價</div>
                             <div class="listviewhead_num">數量</div>
                         </div>
-                        <div class="listview_type0">
+                        <div class="listview">
                             <div class="listviewentry">
                                 <div class="product_code">GP16-JP001</div>
                                 <div class="product_rare">GSE</div>
@@ -136,29 +153,42 @@
                                 <div class="product_price">50</div>
                                 <div class="product_num">1件</div>
                             </div>
+                            <div class="listviewentry">
+                                <div class="product_code">GP16-JP001</div>
+                                <div class="product_rare">GSE</div>
+                                <div class="product_title"><a href="#">成長球莖</a></div>
+                                <div class="product_trace_cancel"><a href="#">取消追蹤</a></div>
+                                <div class="product_off_mode">下架</div>
+                                <div class="product_price">50</div>
+                                <div class="product_num">1件</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="panel_ext1" id="page_member_buy3">
-                    <div class="panelhead">已得標 -- 請聯絡賣家移交商品</div>
+                <div class="panel panel_ext1" id="page_member_buy3">
+                    <div class="panelhead">
+                        <a id="page_member_buy3_show" href="#">﹣</a>
+                        <div id="page_member_buy3_num">[0]</div>
+                        <div id="page_member_buy3_title">已得標 -- 請聯絡賣家移交商品</div>
+                    </div>
                     <div class="panelcontent">
                         <div class="listview_head">
                             <div class="listviewhead_code">卡號</div>
                             <div class="listviewhead_rare">等級</div>
                             <div class="listviewhead_title">商品標題</div>
-                            <div class="listviewhead_cancel">商品操作</div>
-                            <div class="listviewhead_buyer">連絡賣家</div>
+                            <div class="listviewhead_cancel">操作</div>
+                            <div class="listviewhead_saler">連絡賣家</div>
                             <div class="listviewhead_price">價格</div>
                             <div class="listviewhead_num">數量</div>
                             <div class="listviewhead_total_price">總價</div>
                         </div>
-                        <div class="listview_type0">
+                        <div class="listview">
                             <div class="listviewentry">
                                 <div class="product_code">GP16-JP001</div>
                                 <div class="product_rare">GSE</div>
                                 <div class="product_title"><a href="#">成長球莖</a></div>
                                 <div class="product_deal_cancel"><a href="#">交易取消</a></div>
-                                <div class="product_buyer"><a href="#">henry1234562</a></div>
+                                <div class="product_saler"><a href="#">henry1234562</a></div>
                                 <div class="product_price">50</div>
                                 <div class="product_num">2件</div>
                                 <div class="product_total_price">100</div>
@@ -168,7 +198,7 @@
                                 <div class="product_rare">GSE</div>
                                 <div class="product_title"><a href="#">成長球莖</a></div>
                                 <div class="product_deal_cancel"><a href="#">交易取消</a></div>
-                                <div class="product_buyer"><a href="#">henry1234562</a></div>
+                                <div class="product_saler"><a href="#">henry1234562</a></div>
                                 <div class="product_price">30</div>
                                 <div class="product_num">3件</div>
                                 <div class="product_total_price">90</div>
@@ -176,82 +206,509 @@
                         </div>
                     </div>
                 </div>
-                <div class="panel_ext1" id="page_member_buy4">
-                    <div class="panelhead">賣家已移交 -- 請確認商品是否無誤</div>
-                    <div class="panelcontent">
+                <div class="panel panel_ext1" id="page_member_buy4">
+                    <div class="panelhead">
+                        <a id="page_member_buy4_show" href="#">﹣</a>
+                        <div id="page_member_buy4_num">[0]</div>
+                        <div id="page_member_buy4_title">賣家已移交 -- 請確認商品是否無誤</div>
                     </div>
-                </div>
-                <div class="panel_ext1" id="page_member_buy5">
-                    <div class="panelhead">交易完成</div>
-                    <div class="panelcontent">
-                    </div>
-                </div>
-                <div class="panel_ext1" id="page_member_buy6">
-                    <div class="panelhead">未得標</div>
-                    <div class="panelcontent">
-                    </div>
-                </div>
-                <div class="panel_ext1" id="page_member_buy7">
-                    <div class="panelhead">交易取消中 -- 請等待賣家同意取消</div>
-                    <div class="panelcontent">
-                    </div>
-                </div>
-                <div class="panel_ext1" id="page_member_buy8">
-                    <div class="panelhead">已取消交易</div>
-                    <div class="panelcontent">
-                    </div>
-                </div>
-                <div class="panel_ext1" id="page_member_sale1">
-                    <div class="panelhead">已上架</div>
                     <div class="panelcontent">
                         <div class="listview_head">
-                            <div id="listviewlabel_fb">HEAD</div>
+                            <div class="listviewhead_code">卡號</div>
+                            <div class="listviewhead_rare">等級</div>
+                            <div class="listviewhead_title">商品標題</div>
+                            <div class="listviewhead_ack">確認</div>
+                            <div class="listviewhead_cancel">操作</div>
+                            <div class="listviewhead_saler">連絡賣家</div>
+                            <div class="listviewhead_price">價格</div>
+                            <div class="listviewhead_num">數量</div>
+                            <div class="listviewhead_total_price">總價</div>
                         </div>
-                        <div class="listview_type0">
+                        <div class="listview">
                             <div class="listviewentry">
                                 <div class="product_code">GP16-JP001</div>
                                 <div class="product_rare">GSE</div>
                                 <div class="product_title"><a href="#">成長球莖</a></div>
-                                <div class="product_num">2件</div>
+                                <div class="product_receive_ack"><a href="#">確認領收</a></div>
+                                <div class="product_deal_cancel"><a href="#">交易取消</a></div>
+                                <div class="product_saler"><a href="#">henry1234562</a></div>
                                 <div class="product_price">50</div>
-                                <div class="product_mode">直購</div>
+                                <div class="product_num">2件</div>
+                                <div class="product_total_price">100</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="panel_ext1" id="page_member_sale2">
-                    <div class="panelhead">交易進行中 -- 請聯絡買家以移交商品</div>
+                <div class="panel panel_ext1" id="page_member_buy5">
+                    <div class="panelhead">
+                        <a id="page_member_buy5_show" href="#">﹣</a>
+                        <div id="page_member_buy5_num">[0]</div>
+                        <div id="page_member_buy5_title">交易完成</div>
+                    </div>
                     <div class="panelcontent">
+                        <div class="listview_head">
+                            <div class="listviewhead_code">卡號</div>
+                            <div class="listviewhead_rare">等級</div>
+                            <div class="listviewhead_title">商品標題</div>
+                            <div class="listviewhead_saler">賣家</div>
+                            <div class="listviewhead_price">價格</div>
+                            <div class="listviewhead_num">數量</div>
+                            <div class="listviewhead_total_price">總價</div>
+                        </div>
+                        <div class="listview">
+                            <div class="listviewentry">
+                                <div class="product_code">GP16-JP001</div>
+                                <div class="product_rare">GSE</div>
+                                <div class="product_title"><a href="#">成長球莖</a></div>
+                                <div class="product_saler"><a href="#">henry1234562</a></div>
+                                <div class="product_price">50</div>
+                                <div class="product_num">2件</div>
+                                <div class="product_total_price">100</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="panel_ext1" id="page_member_sale3">
-                    <div class="panelhead">等待領收 -- 商品已移交，等待買家領收</div>
+                <div class="panel panel_ext1" id="page_member_buy6">
+                    <div class="panelhead">
+                        <a id="page_member_buy6_show" href="#">﹣</a>
+                        <div id="page_member_buy6_num">[0]</div>
+                        <div id="page_member_buy6_title">未得標</div>
+                    </div>
                     <div class="panelcontent">
+                        <div class="listview_head">
+                            <div class="listviewhead_code">卡號</div>
+                            <div class="listviewhead_rare">等級</div>
+                            <div class="listviewhead_title">商品標題</div>
+                            <div class="listviewhead_price">結標價</div>
+                            <div class="listviewhead_my_price">出價</div>
+                            <div class="listviewhead_buyer">得標者</div>
+                            <div class="listviewhead_saler">賣家</div>
+                        </div>
+                        <div class="listview">
+                            <div class="listviewentry">
+                                <div class="product_code">GP16-JP001</div>
+                                <div class="product_rare">GSE</div>
+                                <div class="product_title"><a href="#">成長球莖</a></div>
+                                <div class="product_price">50</div>
+                                <div class="product_my_price">30</div>
+                                <div class="product_buyer"><a href="#">henry1234562</a></div>
+                                <div class="product_saler"><a href="#">henry1234562</a></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="panel_ext1" id="page_member_sale4">
-                    <div class="panelhead">交易完成</div>
+                <div class="panel panel_ext1" id="page_member_buy7">
+                    <div class="panelhead">
+                        <a id="page_member_buy7_show" href="#">﹣</a>
+                        <div id="page_member_buy7_num">[0]</div>
+                        <div id="page_member_buy7_title">交易取消中 -- 請等待賣家同意取消</div>
+                    </div>
                     <div class="panelcontent">
+                        <div class="listview_head">
+                            <div class="listviewhead_code">卡號</div>
+                            <div class="listviewhead_rare">等級</div>
+                            <div class="listviewhead_title">商品標題</div>
+                            <div class="listviewhead_reason">取消原因</div>
+                            <div class="listviewhead_operation">操作</div>
+                            <div class="listviewhead_saler">連絡賣家</div>
+                            <div class="listviewhead_price">價格</div>
+                            <div class="listviewhead_num">數量</div>
+                            <div class="listviewhead_total_price">總價</div>
+                        </div>
+                        <div class="listview">
+                            <div class="listviewentry">
+                                <div class="product_code">GP16-JP001</div>
+                                <div class="product_rare">GSE</div>
+                                <div class="product_title"><a href="#">成長球莖</a></div>
+                                <div class="product_deal_reason">雙方同意取消</div>
+                                <div class="product_saler_wait">等待賣方</div>
+                                <div class="product_saler"><a href="#">henry1234562</a></div>
+                                <div class="product_price">50</div>
+                                <div class="product_num">2件</div>
+                                <div class="product_total_price">100</div>
+                            </div>
+                            <div class="listviewentry">
+                                <div class="product_code">GP16-JP001</div>
+                                <div class="product_rare">GSE</div>
+                                <div class="product_title"><a href="#">成長球莖</a></div>
+                                <div class="product_deal_reason">雙方同意取消</div>
+                                <div class="product_cancel_wait"><a href="#">同意</a></div>
+                                <div class="product_cancel_not_wait"><a href="#">不同意</a></div>
+                                <div class="product_saler"><a href="#">henry1234562</a></div>
+                                <div class="product_price">50</div>
+                                <div class="product_num">2件</div>
+                                <div class="product_total_price">100</div>
+                            </div>
+                            <div class="listviewentry">
+                                <div class="product_code">GP16-JP001</div>
+                                <div class="product_rare">GSE</div>
+                                <div class="product_title"><a href="#">成長球莖</a></div>
+                                <div class="product_product_reason">賣方無法出貨</div>
+                                <div class="product_cancel_wait"><a href="#">同意</a></div>
+                                <div class="product_cancel_not_wait"><a href="#">不同意</a></div>
+                                <div class="product_saler"><a href="#">henry1234562</a></div>
+                                <div class="product_price">50</div>
+                                <div class="product_num">2件</div>
+                                <div class="product_total_price">100</div>
+                            </div>
+                            <div class="listviewentry">
+                                <div class="product_code">GP16-JP001</div>
+                                <div class="product_rare">GSE</div>
+                                <div class="product_title"><a href="#">成長球莖</a></div>
+                                <div class="product_buyerror_reason">買方買錯商品</div>
+                                <div class="product_saler_wait">等待賣方</div>
+                                <div class="product_saler"><a href="#">henry1234562</a></div>
+                                <div class="product_price">50</div>
+                                <div class="product_num">2件</div>
+                                <div class="product_total_price">100</div>
+                            </div>
+                            <div class="listviewentry">
+                                <div class="product_code">GP16-JP001</div>
+                                <div class="product_rare">GSE</div>
+                                <div class="product_title"><a href="#">成長球莖</a></div>
+                                <div class="product_unget_reason">沒有收到商品</div>
+                                <div class="product_admin_wait">等待管理員</div>
+                                <div class="product_saler"><a href="#">henry1234562</a></div>
+                                <div class="product_price">50</div>
+                                <div class="product_num">2件</div>
+                                <div class="product_total_price">100</div>
+                            </div>
+                            <div class="listviewentry">
+                                <div class="product_code">GP16-JP001</div>
+                                <div class="product_rare">GSE</div>
+                                <div class="product_title"><a href="#">成長球莖</a></div>
+                                <div class="product_wrong_reason">商品不符</div>
+                                <div class="product_admin_wait">等待管理員</div>
+                                <div class="product_saler"><a href="#">henry1234562</a></div>
+                                <div class="product_price">50</div>
+                                <div class="product_num">2件</div>
+                                <div class="product_total_price">100</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="panel_ext1" id="page_member_sale5">
-                    <div class="panelhead">已下架 -- 可編輯後重新上架</div>
+                <div class="panel panel_ext1" id="page_member_buy8">
+                    <div class="panelhead">
+                        <a id="page_member_buy8_show" href="#">﹣</a>
+                        <div id="page_member_buy8_num">[0]</div>
+                        <div id="page_member_buy8_title">已取消交易</div>
+                    </div>
                     <div class="panelcontent">
+                        <div class="listview_head">
+                            <div class="listviewhead_code">卡號</div>
+                            <div class="listviewhead_rare">等級</div>
+                            <div class="listviewhead_title">商品標題</div>
+                            <div class="listviewhead_saler">賣家</div>
+                            <div class="listviewhead_price">價格</div>
+                            <div class="listviewhead_num">數量</div>
+                            <div class="listviewhead_total_price">總價</div>
+                        </div>
+                        <div class="listview">
+                            <div class="listviewentry">
+                                <div class="product_code">GP16-JP001</div>
+                                <div class="product_rare">GSE</div>
+                                <div class="product_title"><a href="#">成長球莖</a></div>
+                                <div class="product_saler"><a href="#">henry1234562</a></div>
+                                <div class="product_price">50</div>
+                                <div class="product_num">2件</div>
+                                <div class="product_total_price">100</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="panel_ext1" id="page_member_sale6">
-                    <div class="panelhead">流標商品 -- 無人出價，可編輯後重新上架</div>
+                <div class="panel panel_ext1" id="page_member_sale1">
+                    <div class="panelhead">
+                        <a id="page_member_sale1_show" href="#">﹣</a>
+                        <div id="page_member_sale1_num">[0]</div>
+                        <div id="page_member_sale1_title">已上架</div>
+                    </div>
                     <div class="panelcontent">
+                        <div class="listview_head">
+                            <div class="listviewhead_code">卡號</div>
+                            <div class="listviewhead_rare">等級</div>
+                            <div class="listviewhead_title">商品標題</div>
+                            <div class="listviewhead_mode">模式</div>
+                            <div class="listviewhead_price">現價</div>
+                            <div class="listviewhead_num">數量</div>
+                        </div>
+                        <div class="listview">
+                            <div class="listviewentry">
+                                <div class="product_code">GP16-JP001</div>
+                                <div class="product_rare">GSE</div>
+                                <div class="product_title"><a href="#">成長球莖</a></div>
+                                <div class="product_order_mode">直購</div>
+                                <div class="product_price">50</div>
+                                <div class="product_num">2件</div>
+                            </div>
+                            <div class="listviewentry">
+                                <div class="product_code">GP16-JP001</div>
+                                <div class="product_rare">GSE</div>
+                                <div class="product_title"><a href="#">成長球莖</a></div>
+                                <div class="product_bid_mode">競標</div>
+                                <div class="product_price">50</div>
+                                <div class="product_num">1件</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="panel_ext1" id="page_member_sale7">
-                    <div class="panelhead">交易取消中 -- 請等待買家同意取消</div>
+                <div class="panel panel_ext1" id="page_member_sale2">
+                    <div class="panelhead">
+                        <a id="page_member_sale2_show" href="#">﹣</a>
+                        <div id="page_member_sale2_num">[0]</div>
+                        <div id="page_member_sale2_title">交易進行中 -- 請聯絡買家以移交商品</div>
+                    </div>
                     <div class="panelcontent">
+                        <div class="listview_head">
+                            <div class="listviewhead_code">卡號</div>
+                            <div class="listviewhead_rare">等級</div>
+                            <div class="listviewhead_title">商品標題</div>
+                            <div class="listviewhead_ack">確認</div>
+                            <div class="listviewhead_cancel">操作</div>
+                            <div class="listviewhead_buyer">連絡買家</div>
+                            <div class="listviewhead_price">價格</div>
+                            <div class="listviewhead_num">數量</div>
+                            <div class="listviewhead_total_price">總價</div>
+                        </div>
+                        <div class="listview">
+                            <div class="listviewentry">
+                                <div class="product_code">GP16-JP001</div>
+                                <div class="product_rare">GSE</div>
+                                <div class="product_title"><a href="#">成長球莖</a></div>
+                                <div class="product_send_ack"><a href="#">確認移交</a></div>
+                                <div class="product_deal_cancel"><a href="#">交易取消</a></div>
+                                <div class="product_buyer"><a href="#">henry1234562</a></div>
+                                <div class="product_price">50</div>
+                                <div class="product_num">2件</div>
+                                <div class="product_total_price">100</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="panel_ext1" id="page_member_sale8">
-                    <div class="panelhead">已取消交易</div>
+                <div class="panel panel_ext1" id="page_member_sale3">
+                    <div class="panelhead">
+                        <a id="page_member_sale3_show" href="#">﹣</a>
+                        <div id="page_member_sale3_num">[0]</div>
+                        <div id="page_member_sale3_title">等待領收 -- 商品已移交，等待買家領收</div>
+                    </div>
                     <div class="panelcontent">
+                        <div class="listview_head">
+                            <div class="listviewhead_code">卡號</div>
+                            <div class="listviewhead_rare">等級</div>
+                            <div class="listviewhead_title">商品標題</div>
+                            <div class="listviewhead_buyer">聯絡買家</div>
+                            <div class="listviewhead_price">價格</div>
+                            <div class="listviewhead_num">數量</div>
+                            <div class="listviewhead_total_price">總價</div>
+                        </div>
+                        <div class="listview">
+                            <div class="listviewentry">
+                                <div class="product_code">GP16-JP001</div>
+                                <div class="product_rare">GSE</div>
+                                <div class="product_title"><a href="#">成長球莖</a></div>
+                                <div class="product_buyer"><a href="#">henry1234562</a></div>
+                                <div class="product_price">50</div>
+                                <div class="product_num">2件</div>
+                                <div class="product_total_price">100</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel_ext1" id="page_member_sale4">
+                    <div class="panelhead">
+                        <a id="page_member_sale4_show" href="#">﹣</a>
+                        <div id="page_member_sale4_num">[0]</div>
+                        <div id="page_member_sale4_title">交易完成</div>
+                    </div>
+                    <div class="panelcontent">
+                        <div class="listview_head">
+                            <div class="listviewhead_code">卡號</div>
+                            <div class="listviewhead_rare">等級</div>
+                            <div class="listviewhead_title">商品標題</div>
+                            <div class="listviewhead_buyer">買家</div>
+                            <div class="listviewhead_price">價格</div>
+                            <div class="listviewhead_num">數量</div>
+                            <div class="listviewhead_total_price">總價</div>
+                        </div>
+                        <div class="listview">
+                            <div class="listviewentry">
+                                <div class="product_code">GP16-JP001</div>
+                                <div class="product_rare">GSE</div>
+                                <div class="product_title"><a href="#">成長球莖</a></div>
+                                <div class="product_buyer"><a href="#">henry1234562</a></div>
+                                <div class="product_price">50</div>
+                                <div class="product_num">2件</div>
+                                <div class="product_total_price">100</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel_ext1" id="page_member_sale5">
+                    <div class="panelhead">
+                        <a id="page_member_sale5_show" href="#">﹣</a>
+                        <div id="page_member_sale5_num">[0]</div>
+                        <div id="page_member_sale5_title">已下架 -- 可編輯後重新上架</div>
+                    </div>
+                    <div class="panelcontent">
+                        <div class="listview_head">
+                            <div class="listviewhead_code">卡號</div>
+                            <div class="listviewhead_rare">等級</div>
+                            <div class="listviewhead_title">商品標題</div>
+                            <div class="listviewhead_on_item">上架</div>
+                            <div class="listviewhead_del_item">刪除</div>
+                        </div>
+                        <div class="listview">
+                            <div class="listviewentry">
+                                <div class="product_code">GP16-JP001</div>
+                                <div class="product_rare">GSE</div>
+                                <div class="product_title"><a href="#">成長球莖</a></div>
+                                <div class="product_on_item"><a href="#">上架</a></div>
+                                <div class="product_del_item"><a href="#">刪除</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel_ext1" id="page_member_sale6">
+                    <div class="panelhead">
+                        <a id="page_member_sale6_show" href="#">﹣</a>
+                        <div id="page_member_sale6_num">[0]</div>
+                        <div id="page_member_sale6_title">流標商品 -- 無人出價，可編輯後重新上架</div>
+                    </div>
+                    <div class="panelcontent">
+                        <div class="listview_head">
+                            <div class="listviewhead_code">卡號</div>
+                            <div class="listviewhead_rare">等級</div>
+                            <div class="listviewhead_title">商品標題</div>
+                            <div class="listviewhead_on_item">上架</div>
+                            <div class="listviewhead_del_item">刪除</div>
+                        </div>
+                        <div class="listview">
+                            <div class="listviewentry">
+                                <div class="product_code">GP16-JP001</div>
+                                <div class="product_rare">GSE</div>
+                                <div class="product_title"><a href="#">成長球莖</a></div>
+                                <div class="product_on_item"><a href="#">上架</a></div>
+                                <div class="product_del_item"><a href="#">刪除</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel_ext1" id="page_member_sale7">
+                    <div class="panelhead">
+                        <a id="page_member_sale7_show" href="#">﹣</a>
+                        <div id="page_member_sale7_num">[0]</div>
+                        <div id="page_member_sale7_title">交易取消中 -- 請等待買家同意取消</div>
+                    </div>
+                    <div class="panelcontent">
+                        <div class="listview_head">
+                            <div class="listviewhead_code">卡號</div>
+                            <div class="listviewhead_rare">等級</div>
+                            <div class="listviewhead_title">商品標題</div>
+                            <div class="listviewhead_reason">取消原因</div>
+                            <div class="listviewhead_operation">操作</div>
+                            <div class="listviewhead_buyer">連絡買家</div>
+                            <div class="listviewhead_price">價格</div>
+                            <div class="listviewhead_num">數量</div>
+                            <div class="listviewhead_total_price">總價</div>
+                        </div>
+                        <div class="listview">
+                            <div class="listviewentry">
+                                <div class="product_code">GP16-JP001</div>
+                                <div class="product_rare">GSE</div>
+                                <div class="product_title"><a href="#">成長球莖</a></div>
+                                <div class="product_deal_reason">雙方同意取消</div>
+                                <div class="product_buyer_wait">等待買方</div>
+                                <div class="product_buyer"><a href="#">henry1234562</a></div>
+                                <div class="product_price">50</div>
+                                <div class="product_num">2件</div>
+                                <div class="product_total_price">100</div>
+                            </div>
+                            <div class="listviewentry">
+                                <div class="product_code">GP16-JP001</div>
+                                <div class="product_rare">GSE</div>
+                                <div class="product_title"><a href="#">成長球莖</a></div>
+                                <div class="product_deal_reason">雙方同意取消</div>
+                                <div class="product_cancel_wait"><a href="#">同意</a></div>
+                                <div class="product_cancel_not_wait"><a href="#">不同意</a></div>
+                                <div class="product_buyer"><a href="#">henry1234562</a></div>
+                                <div class="product_price">50</div>
+                                <div class="product_num">2件</div>
+                                <div class="product_total_price">100</div>
+                            </div>
+                            <div class="listviewentry">
+                                <div class="product_code">GP16-JP001</div>
+                                <div class="product_rare">GSE</div>
+                                <div class="product_title"><a href="#">成長球莖</a></div>
+                                <div class="product_product_reason">賣方無法出貨</div>
+                                <div class="product_buyer_wait">等待買方</div>
+                                <div class="product_buyer"><a href="#">henry1234562</a></div>
+                                <div class="product_price">50</div>
+                                <div class="product_num">2件</div>
+                                <div class="product_total_price">100</div>
+                            </div>
+                            <div class="listviewentry">
+                                <div class="product_code">GP16-JP001</div>
+                                <div class="product_rare">GSE</div>
+                                <div class="product_title"><a href="#">成長球莖</a></div>
+                                <div class="product_buyerror_reason">買方買錯商品</div>
+                                <div class="product_cancel_wait"><a href="#">同意</a></div>
+                                <div class="product_cancel_not_wait"><a href="#">不同意</a></div>
+                                <div class="product_buyer"><a href="#">henry1234562</a></div>
+                                <div class="product_price">50</div>
+                                <div class="product_num">2件</div>
+                                <div class="product_total_price">100</div>
+                            </div>
+                            <div class="listviewentry">
+                                <div class="product_code">GP16-JP001</div>
+                                <div class="product_rare">GSE</div>
+                                <div class="product_title"><a href="#">成長球莖</a></div>
+                                <div class="product_unget_reason">沒有收到商品</div>
+                                <div class="product_admin_wait">等待管理員</div>
+                                <div class="product_buyer"><a href="#">henry1234562</a></div>
+                                <div class="product_price">50</div>
+                                <div class="product_num">2件</div>
+                                <div class="product_total_price">100</div>
+                            </div>
+                            <div class="listviewentry">
+                                <div class="product_code">GP16-JP001</div>
+                                <div class="product_rare">GSE</div>
+                                <div class="product_title"><a href="#">成長球莖</a></div>
+                                <div class="product_wrong_reason">商品不符</div>
+                                <div class="product_admin_wait">等待管理員</div>
+                                <div class="product_buyer"><a href="#">henry1234562</a></div>
+                                <div class="product_price">50</div>
+                                <div class="product_num">2件</div>
+                                <div class="product_total_price">100</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel_ext1" id="page_member_sale8">
+                    <div class="panelhead">
+                        <a id="page_member_sale8_show" href="#">﹣</a>
+                        <div id="page_member_sale8_num">[0]</div>
+                        <div id="page_member_sale8_title">已取消交易</div>
+                    </div>
+                    <div class="panelcontent">
+                        <div class="listview_head">
+                            <div class="listviewhead_code">卡號</div>
+                            <div class="listviewhead_rare">等級</div>
+                            <div class="listviewhead_title">商品標題</div>
+                            <div class="listviewhead_buyer">買家</div>
+                            <div class="listviewhead_price">價格</div>
+                            <div class="listviewhead_num">數量</div>
+                            <div class="listviewhead_total_price">總價</div>
+                        </div>
+                        <div class="listview">
+                            <div class="listviewentry">
+                                <div class="product_code">GP16-JP001</div>
+                                <div class="product_rare">GSE</div>
+                                <div class="product_title"><a href="#">成長球莖</a></div>
+                                <div class="product_saler"><a href="#">henry1234562</a></div>
+                                <div class="product_price">50</div>
+                                <div class="product_num">2件</div>
+                                <div class="product_total_price">100</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

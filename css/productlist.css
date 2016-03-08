@@ -2,25 +2,6 @@ div[class^=productlist_] {
     float: left;
 }
 
-/* List Head Typesetting */
-.productlisthead,{
-    width: 100%;
-    height: 40px;
-}
-
-.productlisthead .productlistbutton {
-    float: left;
-    margin: 5px;
-    display: block;
-    width: 90px;
-}
-
-.productlisthead .productlistbutton a {
-    line-height: 30px;
-    display: block;
-}
-
-
 /* Color and Background */
 div[class^=product]:not([class$=_title]) {
     color: #ffffff;
@@ -44,14 +25,23 @@ div[class^=product][class$=_order_mode] {
 div[class^=product][class$=_bid_mode] {
     background: #ff3333;
 }
+div[class^=product][class$=_off_mode] {
+    background: #606060;
+}
 div[class^=product][class$=_normal_status] {
     background: #4ae07a;
 }
-div[class^=product][class$=_warning_status] {
+div[class^=product][class$=_warning_status],
+div[class^=product][class$=_reason] {
     background: #ff4dc6;
 }
 div[class^=product][class$=_time] {
-    background: #a6a6a6;
+    background: #30848a;
+}
+div[class^=product][class$=_admin_wait],
+div[class^=product][class$=_buyer_wait],
+div[class^=product][class$=_saler_wait] {
+    background: #b472cf;
 }
 
 
@@ -194,41 +184,22 @@ div[class^=product][class$=_time] {
     margin-right: 10px;
 }
 
-.productlist_l .productlistitem .productlistitem_code,
-.product_code {
+.productlist_l .productlistitem .productlistitem_code {
     width: 100px;
 }
-.productlist_l .productlistitem .productlistitem_rare,
-.product_rare {
+.productlist_l .productlistitem .productlistitem_rare {
     width: 45px;
 }
-.productlist_l .productlistitem .productlistitem_title {
-}
-.productlist_l .productlistitem .productlistitem_num,
-.product_num {
+.productlist_l .productlistitem .productlistitem_num {
     width: 35px;
 }
 .productlist_l .productlistitem .productlistitem_order_mode,
-.productlist_l .productlistitem .productlistitem_bid_mode,
-.product_order_mode,
-.product_bid_mode {
+.productlist_l .productlistitem .productlistitem_bid_mode {
     width: 33px;
 }
-.productlist_l .productlistitem .productlistitem_price,
-.product_price,
-.product_my_price,
-.product_end_price,
-.product_total_price {
+.productlist_l .productlistitem .productlistitem_price {
     width: 45px;
 }
-.product_normal_status,
-.product_warning_status {
-    width: 80px;
-}
-.product_timeend,
-.product_timeremain {
-}
-
 
 /* Normally Use in Lists */
 .product_code,
@@ -237,6 +208,7 @@ div[class^=product][class$=_time] {
 .product_num, 
 .product_order_mode, 
 .product_bid_mode, 
+.product_off_mode,
 .product_normal_status, 
 .product_warning_status, 
 .product_price,
@@ -249,16 +221,106 @@ div[class^=product][class$=_time] {
 .product_saler,
 .product_trace_cancel,
 .product_deal_cancel,
-.product_cancel_ack,
+.product_cancel_wait,
+.product_cancel_not_wait,
+.product_admin_wait,
+.product_buyer_wait,
+.product_saler_wait,
 .product_receive_ack,
+.product_send_ack,
 .product_on_item,
-.product_off_item,
-.product_send_ack {
+.product_off_item, 
+.product_del_item,
+.product_deal_reason,
+.product_product_reason,
+.product_buyerror_reason,
+.product_unget_reason,
+.product_wrong_reason {
     line-height: 20px;
     height: 20px;
     font-size: 14px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: 5px;
     float: left;
-    margin-left: 10px;
 }
+
+.listviewhead_code,
+.product_code {
+    width: 100px;
+}
+.listviewhead_rare,
+.product_rare {
+    width: 45px;
+}
+.listviewhead_num,
+.product_num {
+    width: 35px;
+}
+.listviewhead_mode,
+.product_order_mode,
+.product_bid_mode,
+.product_off_mode {
+    width: 33px;
+}
+.listviewhead_price,
+.listviewhead_my_price,
+.listviewhead_total_price,
+.product_price,
+.product_my_price,
+.product_end_price,
+.product_total_price {
+    width: 45px;
+}
+.listviewhead_status,
+.product_normal_status,
+.product_warning_status {
+    width: 80px;
+}
+.listviewhead_end_time,
+.product_end_time {
+    width: 130px;
+}
+.listviewhead_remain_time,
+.product_remain_time {
+    width: 65px;
+}
+.listviewhead_buyer,
+.listviewhead_saler,
+.product_buyer,
+.product_saler {
+    width: 100px;
+}
+.listviewhead_trace,
+.listviewhead_cancel,
+.listviewhead_ack,
+.product_trace_cancel,
+.product_deal_cancel,
+.product_receive_ack,
+.product_send_ack {
+    width: 70px;
+}
+.listviewhead_reason,
+.product_deal_reason,
+.product_product_reason,
+.product_buyerror_reason,
+.product_unget_reason,
+.product_wrong_reason {
+    width: 100px;
+}
+.product_cancel_wait,
+.product_cancel_not_wait {
+    width: 50px;
+}
+.listviewhead_operation,
+.product_admin_wait,
+.product_buyer_wait,
+.product_saler_wait {
+    width: 110px;
+}
+.listviewhead_on_item,
+.listviewhead_del_item,
+.product_on_item,
+.product_off_item, 
+.product_del_item {
+    width: 40px;
+}
+

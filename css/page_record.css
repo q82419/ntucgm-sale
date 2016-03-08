@@ -9,24 +9,38 @@ h1 {
     padding: 20px;
 }
 
-.listview_type1 {
+.listview {
     width: 900px;
     border-color: #f7d5a1;
 }
 
-.listview_type1 .listviewentry {
+.listviewentry {
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+    margin-left: 5px;
     border-color: #f7d5a1;
 }
 
-.listview_type1 .listviewdate {
+.listviewentry:hover {
+    background: #fbead0;
+}
+
+.listviewdate {
+    float:left;
+    border-radius: 5px;
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
+    margin: 5px 15px 5px 10px;
+    font-family: Courier, monospace;
+    font-size: 14px;
     background: #c58315;
     color: #ffffff;
 }
 
-.listview_type1 .listviewcontent {
+.listviewcontent {
+    text-align: left;
     color: #5e3d08;
 }
 
-.listview_type1 .listviewentry:hover {
-    background: #fbead0;
-}

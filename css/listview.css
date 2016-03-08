@@ -1,54 +1,22 @@
 .listview_head {
     height: 35px;
     line-height: 35px;
-    font-size: 16px;
 }
 
 .listview_head div {
     float: left;
-    margin-left: 5px;
 }
 
-.listview_type0,
-.listview_type1,
-.listview_type2 {
+.listview {
     margin: 0 auto;
     border-bottom: 1px solid;
 }
 
-.listview_type1 .listviewentry,
-.listview_type2 .listviewentry {
-    height: 35px;
-}
-
-.listview_type0 .listviewentry,
-.listview_type1 .listviewentry,
-.listview_type2 .listviewentry {
+.listviewentry {
     border-top: 1px solid;
 }
 
-.listview_type1 .listviewdate,
-.listview_type1 .listviewcontent,
-.listview_type2 div[class^=listviewlabel],
-.listview_type2 .listviewinput {
+.listviewentry div {
     float: left;
 }
 
-.listview_type1 .listviewdate {
-    border-radius: 5px;
-    width: 100px;
-    height: 25px;
-    line-height: 25px;
-    margin: 5px 10px 5px 10px;
-    font-family: Courier, monospace;
-    font-size: 14px;
-}
-
-.listview_type1 .listviewcontent,
-.listview_type2 div[class^=listviewlabel],
-.listview_type2 .listviewinput {
-    height: 35px;
-    line-height: 35px;
-    font-size: 16px;
-    margin-left: 5px;
-}

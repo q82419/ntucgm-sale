@@ -13,6 +13,19 @@ function hashScroll(href) {
     }
 }
 
+function contentVisible() {
+    if($(this).text() == "＋"){
+        $(this).parent().parent().find(".panelcontent").show();
+        $(this).text("﹣");
+    }
+    else{
+        $(this).parent().parent().find(".panelcontent").hide();
+        $(this).text("＋");
+    }
+    return false;
+}
+
 $(document).ready(function(){
-    $("body").on("click", "a", hashScroll);
+    $("div[id^=page_member_menu]").on("click", "a", hashScroll);
+    $(".panelhead").on("click", "a", contentVisible);
 });
