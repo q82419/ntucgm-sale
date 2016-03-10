@@ -22,7 +22,7 @@ label {
     border-color: #e7b1b1;
 }
 
-.listviewentry {
+.listviewentry, .listview_head {
     height: 35px;
     line-height: 35px;
     font-size: 16px;
@@ -35,6 +35,10 @@ label {
 
 .listviewentry a:hover {
     text-decoration: underline;
+}
+
+#signup {
+    clear: both;
 }
 
 input[type=text] {
@@ -61,11 +65,7 @@ input[type=button]:hover{
 input[id=submit_signup] {
     width: 100px;
     height: 30px;
-    margin-top: 10px;
-    margin-bottom: 5px;
 }
-
-
 
 /* Size */
 #set_application .listview{

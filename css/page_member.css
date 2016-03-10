@@ -134,6 +134,10 @@ div[id^=page_member_sale] .listviewentry a:hover {
 }
 
 /* Listview Head */
+.listview_head {
+    height: 20px;
+    line-height: 20px;
+}
 .panel_ext1[id^=page_member_buy] .listview_head div,
 .panel_ext1[id^=page_member_sale] .listview_head div {
     font-size: 14px;
