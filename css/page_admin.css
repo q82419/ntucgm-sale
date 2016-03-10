@@ -27,6 +27,7 @@ label {
     line-height: 35px;
     font-size: 16px;
     border-color: #e7b1b1;
+    clear: both;
 }
 
 .listviewentry:hover {
@@ -68,14 +69,35 @@ input[id=submit_signup] {
 }
 
 /* Size */
-#set_application .listview{
+#set_deal .listview_head div {
+    margin: 5px;
+}
+.listviewhead_title, .product_title {
+    width: 250px;
+    text-align: left;
+}
+.listviewhead_operation {
+    width: 170px;
+}
+#set_deal .listviewentry {
+    height: 30px;
+    line-height: 30px;
+}
+#set_deal input[type=button] {
+    font-size: 14px;
+    width: 80px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+#set_application .listview {
     width: 940px;
 }
 #set_application .listview_head div,
 #set_application .listviewentry div[class^=listviewlabel_] {
     margin-left: 10px;
 }
-#set_application .listviewinput input[type=button] {
+#set_application input[type=button] {
     width: 50px;
     margin-right: 5px;
 }
