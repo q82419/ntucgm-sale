@@ -15,6 +15,21 @@ $(document).keypress(function(e) {
     }
 });
 
+
+function initSearchBar(){
+    $('#searchmain').find('#searchmaintype').find('select').val($.url().param('type'));
+    if(parseInt($.url().param('type')) == 3){
+        $('#searchmaintext').hide();
+        $('#searchmainrare').show();
+        $('#searchmain').find('#searchmainrare').find('select').val($.url().param('text'));
+    }
+    else
+        $('#searchmain').find('#searchmaintext').val($.url().param('text'));
+    $('#searchmain').find('#searchmainmode').find('select').val($.url().param('mode'));
+    $('#searchmain').find('#searchmainpricelow').val($.url().param('plow'));
+    $('#searchmain').find('#searchmainpriceup').val($.url().param('pup'));
+}
+
 $(document).ready(function(){
     $('#searchmainrare').hide();
     $.ajax({
@@ -27,14 +42,12 @@ $(document).ready(function(){
                     t = $(this).find('text').text();
                 $('#searchmainrare').find('select').append($("<option></option>").attr("value", v).text(t));
             });
+        },
+        complete: function(){
+            initSearchBar();
         }
     });
-    $('#searchmain').find('#searchmaintype').find('select').val($.url().param('type'));
-    $('#searchmain').find('#searchmaintext').val($.url().param('text'));
-    $('#searchmain').find('#searchmainrare').find('select').val($.url().param('rare'));
-    $('#searchmain').find('#searchmainmode').find('select').val($.url().param('mode'));
-    $('#searchmain').find('#searchmainpricelow').val($.url().param('plow'));
-    $('#searchmain').find('#searchmainpriceup').val($.url().param('pup'));
+
     $('#searchmainsubmit a').click(function(){
         var maindiv = $(this).parent().parent(),
             type = maindiv.find('#searchmaintype').find('select'),
