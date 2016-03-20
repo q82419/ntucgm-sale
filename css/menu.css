@@ -37,11 +37,12 @@
     border-radius: 5px;
     padding-left: 10px;
     padding-right: 10px;
+    font-size: 15px;
     display: block;
 }
 
 #menuinner ul li a {
-    width: 70px;
+    width: 60px;
 }
 #menuinner #menulogin a {
     width: 40px;

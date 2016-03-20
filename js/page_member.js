@@ -16,7 +16,7 @@ function hashScroll(href) {
 function contentVisible() {
     if($(this).text() == "＋"){
         $(this).parent().parent().find(".panelcontent").show();
-        $(this).text("﹣");
+        $(this).text("－");
     }
     else{
         $(this).parent().parent().find(".panelcontent").hide();

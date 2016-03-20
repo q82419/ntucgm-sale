@@ -1,4 +1,5 @@
 input {
+    font-family: "Calibri", "Heiti TC", "微軟正黑體";
     border: none;
     font-size: 100%;
 }
@@ -6,4 +7,18 @@ input {
 input[type=text] {
     padding-left: 5px;
     padding-right: 5px;
+}
+
+select {
+    border-radius: none;
+    border: none;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    background: url("../images/arrow.png") no-repeat scroll right center transparent;
+    background-size: 20px;
+    font-family: "Calibri", "Heiti TC", "微軟正黑體";
+    padding-left: 5px;
+    padding-right: 20px;
+    font-size: 100%;
 }

@@ -2,6 +2,7 @@
     line-height: 30px;
 }
 
+#searchmain form,
 #searchmain input {
     float: left;
     margin: 0 5px 0 5px;
@@ -9,11 +10,24 @@
 }
 
 #searchmain #searchmaintext {
-    width: 400px;
+    width: 300px;
 }
 
-#searchmain #searchmaintype {
-    width: 150px;
+#searchmain form[id=searchmainarea] select {
+    height: 30px;
+    width: 90px;
+}
+#searchmain form[id=searchmaintype] select {
+    height: 30px;
+    width: 130px;
+}
+#searchmain form[id=searchmainmode] select {
+    height: 30px;
+    width: 110px;
+}
+#searchmain form[id=searchmainrare] select {
+    height: 30px;
+    width: 300px;
 }
 
 #searchmain #searchmainsubmit {
@@ -22,14 +36,6 @@
     width: 60px;
 }
 
-#searchmain .searchmainbutton {
-    float: right;
-    margin: 0 5px 0 5px;
-    display: block;
-    width: 90px;
-}
-
 #searchmain a {
     display: block;
 }
-

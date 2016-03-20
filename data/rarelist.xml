@@ -1,0 +1,64 @@
+<rarelist>
+    <entry>
+        <value>1</value>
+        <text>普卡(N)</text>
+    </entry>
+    <entry>
+        <value>2</value>
+        <text>隱普(NR)</text>
+    </entry>    <entry>
+        <value>3</value>
+        <text>銀字(R)</text>
+    </entry>    <entry>
+        <value>4</value>
+        <text>普鑽(P)</text>
+    </entry>    <entry>
+        <value>5</value>
+        <text>亮面(SR)</text>
+    </entry>    <entry>
+        <value>6</value>
+        <text>金亮(UR)</text>
+    </entry>    <entry>
+        <value>7</value>
+        <text>銀字半鑽(SE)</text>
+    </entry>    <entry>
+        <value>8</value>
+        <text>金亮全鑽(P+UR)</text>
+    </entry>    <entry>
+        <value>9</value>
+        <text>凸版浮雕(UL)</text>
+    </entry>    <entry>
+        <value>10</value>
+        <text>黃金(GR)</text>
+    </entry>    <entry>
+        <value>11</value>
+        <text>黃金半鑽(GSR)</text>
+    </entry>    <entry>
+        <value>12</value>
+        <text>雕鑽(CR)</text>
+    </entry>    <entry>
+        <value>13</value>
+        <text>收藏家閃(ESR)</text>
+    </entry>    <entry>
+        <value>14</value>
+        <text>雷射(HR)</text>
+    </entry>    <entry>
+        <value>15</value>
+        <text>機台普卡(N)</text>
+    </entry>    <entry>
+        <value>16</value>
+        <text>機台銀字(R)</text>
+    </entry>    <entry>
+        <value>17</value>
+        <text>機台亮面(SR)</text>
+    </entry>    <entry>
+        <value>18</value>
+        <text>機台金亮(UR)</text>
+    </entry>    <entry>
+        <value>19</value>
+        <text>機台半鑽(SE)</text>
+    </entry>
+</rarelist>
+
+
+
