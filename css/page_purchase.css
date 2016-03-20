@@ -1,5 +1,5 @@
 .panel {
-    background: #eafaf5;
+    background: #eaf6fa;
 }
 
 /* search panel */
@@ -9,25 +9,25 @@
 #searchmain div,
 .listviewhead a,
 div[class^=productlist_] .productlistitem {
-    color: #14523e;
+    color: #134353;
 }
 
 #searchmain input,
 #searchmain select,
 .productlist_g .productlistitem {
-    background-color: #d6f5eb;
+    background-color: #d6edf5;
 }
 
 #searchmain input:hover, #searchmain input:focus,
 #searchmain select:hover, #searchmain select:focus,
 #searchmain a,
 .listviewhead [class^=productlistbutton] a {
-    background-color: #c1f0e1;
+    background-color: #c1e5f0;
 }
 
 #searchmain a:hover,
 .listviewhead [class^=productlistbutton] a:hover {
-    background: #84e1c4;
+    background: #83cae2;
 }
 
 
@@ -56,13 +56,13 @@ div[class^=productlist_] .productlistitem {
 }
 
 .productlist_g .productlistitem:hover {
-    background: #adebd7;
+    background: #acdcec;
 }
 .productlist_l .productlistitem:hover {
-    background: #d6f5eb;
+    background: #d6edf5;
 }
 
 .productlist_l,
 .productlist_l .productlistitem {
-    border-color: #6fdcba;
+    border-color: #6ec1dd;
 }

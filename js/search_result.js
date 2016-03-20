@@ -5,5 +5,4 @@ function displayResult(type){
     else if(type == 2){
         $('.productlist_l').toggleClass('productlist_l productlist_g');
     }
-    return false;
 }

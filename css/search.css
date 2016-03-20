@@ -12,6 +12,13 @@
 #searchmain #searchmaintext {
     width: 300px;
 }
+#searchmain #searchmainpricelabel{
+    margin-left: 20px;
+}
+#searchmain #searchmainpricelow,
+#searchmain #searchmainpriceup {
+    width: 55px
+}
 
 #searchmain form[id=searchmainarea] select {
     height: 30px;
@@ -31,9 +38,15 @@
 }
 
 #searchmain #searchmainsubmit {
-    float: left;
-    margin: 0 0 0 5px;
+    float: right;
+    margin: 0 5px 0 0;
     width: 60px;
+}
+
+#searchmain div {
+    float: left;
+    line-height: 30px;
+    height: 30px;
 }
 
 #searchmain a {

@@ -3,6 +3,7 @@
         <title>卡研社競標網</title>
         <meta http-equiv="content-type" content="text/html" charset="utf-8" />
         <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+        <script type="text/javascript" src="js/parseuri.js"></script>
         <script type="text/javascript" src="js/search_query.js"></script>
         <script type="text/javascript" src="js/search_result.js"></script>
         <link href="css/style.css" rel="stylesheet" type="text/css" />
@@ -12,7 +13,7 @@
         <link href="css/form.css" rel="stylesheet" type="text/css" />
         <link href="css/productlist.css" rel="stylesheet" type="text/css" />
         <link href="css/footer.css" rel="stylesheet" type="text/css" />
-        <link href="css/page_sale.css" rel="stylesheet" type="text/css" />
+        <link href="css/page_purchase.css" rel="stylesheet" type="text/css" />
     </head>
 
     <body>
@@ -36,28 +37,39 @@
         <!-- Page Content -->
         <div id="content">
             <div class="panel panel_ext0" id="searchmain">
-                <input type="text" id="searchmaintext" name="query" />
+                <input type="text" id="searchmaintext"/>
                 <form id="searchmainrare">
-                    <select name="method">
+                    <select>
                     </select>
                 </form>
                 <form id="searchmaintype">
-                    <select name="method" onChange="searchMethod(this)">
-                        <option value="0">卡名搜尋</option>
+                    <select onChange="searchMethod(this)">
+                        <option value="0">標題搜尋</option>
                         <option value="1">卡號搜尋</option>
-                        <option value="2">賣家搜尋</option>
+                        <option value="2">買家搜尋</option>
                         <option value="3">卡片等級搜尋</option>
                     </select>
                 </form>
-                <div id="searchmainsubmit"><a href="#">搜尋</a></div>
+                <form id="searchmainmode">
+                    <select>
+                        <option value="0">所有商品</option>
+                        <option value="1">直購商品</option>
+                        <option value="2">競標商品</option>
+                    </select>
+                </form>
+                <div id="searchmainpricelabel">價格範圍：</div>
+                <input type="text" id="searchmainpricelow" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" />
+                <div>～</div>
+                <input type="text" id="searchmainpriceup" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" />
+                <div id="searchmainsubmit"><a href="javascript:void(0)">搜尋</a></div>
             </div>
             <div class="panel panel_ext0" id="searchresult">
                 <div class="listviewhead">
                     <div class="productlistbutton_sort"><a href="#">最新刊登</a></div>
                     <div class="productlistbutton_sort"><a href="#">低價排序</a></div>
                     <div class="productlistbutton_sort"><a href="#">高價排序</a></div>
-                    <div class="productlistbutton_type"><a href="#" onClick="displayResult(1)">列表顯示</a></div>
-                    <div class="productlistbutton_type"><a href="#" onClick="displayResult(2)">圖片顯示</a></div>
+                    <div class="productlistbutton_type"><a href="javascript:void(0)" onClick="displayResult(1)">列表顯示</a></div>
+                    <div class="productlistbutton_type"><a href="javascript:void(0)" onClick="displayResult(2)">圖片顯示</a></div>
                 </div>
                 <div class="productlist_l">
                     <a class="productlistitem" href="#">
