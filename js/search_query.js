@@ -9,15 +9,9 @@ function searchMethod(method){
     }
 }
 
-$(document).keypress(function(e) {
-    if((e.keyCode || e.which) == 13) {
-        $('#searchmainsubmit a').trigger('click');
-    }
-});
-
-
-function initSearchBar(){
-    $('#searchmain').find('#searchmaintype').find('select').val($.url().param('type'));
+function initSearchBarParam(){
+    if($.url().param('type') != undefined)
+        $('#searchmain').find('#searchmaintype').find('select').val($.url().param('type'));
     if(parseInt($.url().param('type')) == 3){
         $('#searchmaintext').hide();
         $('#searchmainrare').show();
@@ -25,12 +19,18 @@ function initSearchBar(){
     }
     else
         $('#searchmain').find('#searchmaintext').val($.url().param('text'));
-    $('#searchmain').find('#searchmainmode').find('select').val($.url().param('mode'));
-    $('#searchmain').find('#searchmainpricelow').val($.url().param('plow'));
-    $('#searchmain').find('#searchmainpriceup').val($.url().param('pup'));
+    if($.url().param('mode') != undefined)
+        $('#searchmain').find('#searchmainmode').find('select').val($.url().param('mode'));
 }
 
-$(document).ready(function(){
+function initSearchBarPrice(){
+    if($.url().param('plow') != undefined)
+        $('#searchmain').find('#searchmainpricelow').val($.url().param('plow'));
+    if($.url().param('pup') != undefined)
+        $('#searchmain').find('#searchmainpriceup').val($.url().param('pup'));
+}
+
+function initSearchBar(isIndex){
     $('#searchmainrare').hide();
     $.ajax({
         url: '../data/rarelist.xml',
@@ -44,16 +44,21 @@ $(document).ready(function(){
             });
         },
         complete: function(){
-            initSearchBar();
+            initSearchBarParam();
+            if(!isIndex)
+                initSearchBarPrice();
         }
     });
+}
 
+function submitListener(isIndex){
     $('#searchmainsubmit a').click(function(){
         var maindiv = $(this).parent().parent(),
             type = maindiv.find('#searchmaintype').find('select'),
             mode = maindiv.find('#searchmainmode').find('select'),
             rare = maindiv.find('#searchmainrare').find('select'),
             text = maindiv.find('#searchmaintext'),
+            area = maindiv.find('#searchmainarea').find('select'),
             plow = maindiv.find('#searchmainpricelow'),
             pup = maindiv.find('#searchmainpriceup'),
             url = "?type=" + type.val() + "&";
@@ -66,17 +71,28 @@ $(document).ready(function(){
             }
             url += "text=" + text.val() + "&mode=" + mode.val();
         }
-        if(plow.val() != "" && pup.val() != ""){
-            if(parseInt(plow.val()) > parseInt(pup.val())){
-                alert("搜尋價格範圍輸入錯誤。");
-                return false;
-            }
+
+        if(isIndex){
+            if(area.val() == 0)
+                location.href = 'sale.html' + url;
+            else
+                location.href = 'purchase.html' + url;
         }
-        if(plow.val() != "")
-            url += "&plow=" + plow.val();
-        if(pup.val() != "")
-            url += "&pup=" + pup.val();
-        location.href = $.url().attr('file') + url;
+        else{
+            if(plow.val() != "" && pup.val() != ""){
+                if(parseInt(plow.val()) > parseInt(pup.val())){
+                    alert("搜尋價格範圍輸入錯誤。");
+                    return false;
+                }
+            }
+            if(plow.val() != "")
+                url += "&plow=" + plow.val();
+            if(pup.val() != "")
+                url += "&pup=" + pup.val();
+            location.href = $.url().attr('file') + url;
+        }
         return false;
     });
-});
+
+
+}

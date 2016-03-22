@@ -1,3 +1,81 @@
-.panel {
+/* Panel Background */
+.panel_ext1#page_quickon_sale {
+    background: #eafaf5;
+}
+
+.panel_ext1#page_quickon_purchase {
     background: #eaf6fa;
+}
+
+/* Panel Head Typesetting */
+.panel_ext1 .panelhead {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.panel_ext1#page_quickon_sale .panelhead,
+.panel_ext1#page_quickon_purchase .panelhead {
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* Panel Head Color */
+.panel_ext1#page_quickon_sale .panelhead {
+    background: #30cf9c;
+    color: #13533f;
+}
+
+.panel_ext1#page_quickon_purchase .panelhead {
+    background: #30a7cf;
+    color: #134353;
+}
+
+/* Link */
+.panel a {
+    display: block;
+    font-size: 18px;
+    line-height: 30px;
+}
+.panel_ext1#page_quickon_sale a {
+    color: #14523e;
+    background-color: #c1f0e1;
+}
+.panel_ext1#page_quickon_sale a:hover {
+    background: #84e1c4;
+}
+.panel_ext1#page_quickon_purchase a {
+    color: #134353;
+    background-color: #c1e5f0;
+}
+.panel_ext1#page_quickon_purchase a:hover {
+    background: #83cae2;
+}
+div[id^=page_quickon][id$=add] a {
+    margin: 0 0 10px 15px;
+    width: 50px;
+    float: left;
+}
+div[id^=page_quickon][id$=submit] a {
+    margin: 0 15px 10px 0;
+    width: 100px;
+    float: right;
+}
+
+/* Listview Color */
+.panel_ext1#page_quickon_sale .listview,
+.panel_ext1#page_quickon_sale .listview .listviewentry {
+    border-color: #6fdcba;
+}
+
+.panel_ext1#page_quickon_sale .listview .listviewentry:hover {
+    background: #d6f5eb;
+}
+
+.panel_ext1#page_quickon_purchase .listview,
+.panel_ext1#page_quickon_purchase .listview .listviewentry {
+    border-color: #6ec1dd;
+}
+
+.panel_ext1#page_quickon_purchase .listview .listviewentry:hover {
+    background: #d6edf5;
 }
