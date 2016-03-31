@@ -1,4 +1,5 @@
 $(function(){  
+    /*
     $('#signup input[id=submit_signup]').click(function(){
         var vid = $("#pttid").val();
         var vperm = $('input[name="permission"]:checked').val();
@@ -40,4 +41,8 @@ $(function(){
             });
         }
     });
+    */
+    
+    
+    menuLoginState(true);
 });

@@ -93,6 +93,4 @@ function submitListener(isIndex){
         }
         return false;
     });
-
-
 }
