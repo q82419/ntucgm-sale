@@ -1,5 +1,5 @@
 // FB SDK Loading and Initialization
-function fbsdkInitialization(isRedirect) {
+function fbsdkInitialization(callback, param) {
     (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id))
@@ -15,7 +15,7 @@ function fbsdkInitialization(isRedirect) {
             xfbml      : true,
             version    : 'v2.5'
         });
-        tryGetNTUCGMID(isRedirect);
+        callback(param);
     };
 }
 
@@ -24,8 +24,9 @@ function loginPressListener(buttonID) {
     $('#' + buttonID + ' a').click(function(){
         FB.login(function(response){
             if (response.status === 'connected') {
-                passAccessToken(response.authResponse.accessToken, false);
-                $(location).attr("href", "index.html");
+                passAccessToken(response.authResponse.accessToken, false, function(){
+                    $(location).attr("href", "index.html");
+                });
             } else if (response.status === 'not_authorized') {
                 alert('Please log into this app.');
             } else {
@@ -38,7 +39,7 @@ function loginPressListener(buttonID) {
 // UI Login name
 function setMenuLoginName(isLogin, name) {
     if(isLogin){
-        $('#menulogname').html('Hi !!');
+        $('#menulogname').html('Hi, ' + name);
         $('#menulogin a').html('登出');
     }
     else{
@@ -49,7 +50,7 @@ function setMenuLoginName(isLogin, name) {
 
 
 // Menu Login Status
-function menuLoginState(isRedirect) {
+function menuLoginState(isRedirect, isForcedAuth) {
     if(localStorage.ntucgmid){
         // Has login in this computer
         $.ajax({
@@ -60,25 +61,25 @@ function menuLoginState(isRedirect) {
             url: "http://140.112.28.131:3000/login",
             success: function(data){
                 var stat = JSON.parse(JSON.stringify(data))["status"];
-                var uid = JSON.parse(JSON.stringify(data))["id"];
-                if(parseInt(stat) == 1){
+                var name = JSON.parse(JSON.stringify(data))["name"];
+                if(parseInt(stat) == 0){
                     // Updated the timestamp
-                    setMenuLoginName(true, '1234');
+                    setMenuLoginName(true, name);
                 }
                 else{
                     // Need to check login state
-                    fbsdkInitialization(isRedirect);
+                    fbsdkInitialization(tryGetNTUCGMID, isRedirect);
                 }
             },
             error: function(xhr, ajaxOptions, thrownError){ 
-                alert(xhr.status + ' ' + thrownError);
+                alert("伺服器連接錯誤，請稍候再試或聯絡管理員。");
             }
         });
     }
     else{
         // May changed computer or public computer
         setMenuLoginName(false, '');
-        fbsdkInitialization(isRedirect);
+        fbsdkInitialization(tryGetNTUCGMID, isRedirect);
     }
 }
 
@@ -90,7 +91,7 @@ function tryGetNTUCGMID(isRedirect){
     FB.getLoginStatus(function(response) {
         if (response.status === 'connected') {
             // A fb account logged in, try to pass access token for ntucgmid
-            passAccessToken(response.authResponse.accessToken, isRedirect);
+            passAccessToken(response.authResponse.accessToken, isRedirect, null);
         }
         else{
             if(isRedirect){
@@ -103,7 +104,7 @@ function tryGetNTUCGMID(isRedirect){
 
 
 // Pass access token to server for getting user ID.
-function passAccessToken(token, isRedirect){
+function passAccessToken(token, isRedirect, callback){
     $.ajax({
         type: 'POST',
         data: JSON.stringify({'cmd': 'checkToken', 'token': token}),
@@ -113,24 +114,41 @@ function passAccessToken(token, isRedirect){
         success: function(data){
             var stat = JSON.parse(JSON.stringify(data))["status"];
             var uid = JSON.parse(JSON.stringify(data))["id"];
-            if(parseInt(stat) == 1){
+            var name = JSON.parse(JSON.stringify(data))["name"];
+            if(parseInt(stat) == 0){
                 // Checked the logged in fb account is registered
                 localStorage.ntucgmid = uid;
-                setMenuLoginName(true, uid);
+                setMenuLoginName(true, name);
             }
             else{
-                // FB account is not registered in server
                 localStorage.removeItem("ntucgmid");
                 setMenuLoginName(false, '');
-                if(isRedirect){
-                    $(location).attr("href", "notlogin.html");
+                if(parseInt(stat) == 1){
+                    // FB account is not registered in server
+                    if(isRedirect){
+                        $(location).attr("href", "notregister.html");
+                    }
+                }
+                else if(parseInt(stat) == 3){
+                    // Account has not been authorized yet
+                    if(isRedirect){
+                        $(location).attr("href", "notauthorized.html");
+                    }
+                }
+                else if(parseInt(stat) == 4){
+                    // Account has been forbidden
+                    if(isRedirect){
+                        $(location).attr("href", "notallowed.html");
+                    }
+                }
+                else{
+                    $(location).attr("href", "error.html");
                 }
             }
+            callback();
         },
-        error: function(xhr, ajaxOptions, thrownError){
-            alert('passaccess' + xhr.status + ' ' + thrownError);
+        error: function(xhr, ajaxOptions, thrownError){ 
+            alert("伺服器連接錯誤，請稍候再試或聯絡管理員。");
         }
     });
 }
-
-
