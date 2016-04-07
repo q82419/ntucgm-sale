@@ -33,13 +33,20 @@ input[type=submit]:hover{
     background: #83cae2;
 }
 
+#message {
+    height: 30px;
+    color: red;
+    float:center;
+    text-align: center;
+}
+
 .panel {
     background: #eaf6fa;
     padding: 20px;
 }
 
 .listview {
-    width: 450px;
+    width: 480px;
     color: #134353;
     border-color: #acdcec;
 }

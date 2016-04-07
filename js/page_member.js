@@ -28,5 +28,5 @@ function contentVisible() {
 $(document).ready(function(){
     $("div[id^=page_member_menu]").on("click", "a", hashScroll);
     $(".panelhead").on("click", "a", contentVisible);
-    menuLoginState(true);
+    getLoginState(true, false);
 });

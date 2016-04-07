@@ -4,12 +4,15 @@
         <meta http-equiv="content-type" content="text/html" charset="utf-8" />
         <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
         <script type="text/javascript" src="js/fblogin.js"></script>
-        <script type="text/javascript" src="js/page_notlogin.js"></script>
+        <script type="text/javascript" src="js/connect.js"></script>
+        <script type="text/javascript" src="js/page_notregister.js"></script>
         <link href="css/style.css" rel="stylesheet" type="text/css" />
         <link href="css/menu.css" rel="stylesheet" type="text/css" />
         <link href="css/panel.css" rel="stylesheet" type="text/css" />
+        <link href="css/listview.css" rel="stylesheet" type="text/css" />
+        <link href="css/form.css" rel="stylesheet" type="text/css" />
         <link href="css/footer.css" rel="stylesheet" type="text/css" />
-        <link href="css/page_notlogin.css" rel="stylesheet" type="text/css" />
+        <link href="css/page_profile.css" rel="stylesheet" type="text/css" />
     </head>
 
     <body>
@@ -25,16 +28,58 @@
                     <li><a class="menubutton" id="menubutton_m" href="admin.html">管理系統</a></li>
                     <li><a class="menubutton" id="menubutton_e" href="record.html">訊息公告</a></li>
                 </ul>
-                <div id="menulogin"><a href="#"></a></div>
-                <div id="menulogname"></div>
             </div>
         </div>
 
         <!-- Page Content -->
         <div id="content">
-            <div class="panel">
-                <br><h1>尚未註冊，請完成註冊程序。</h1><br>
-                <br><h1>頁面製作中</h1><br>
+            <div class="panel panel_ext0" id="content_prepare">
+                <br><br><h1>讀取中，請稍候......</h1><br><br>
+            </div>
+            <div class="panel panel_ext0" id="content_main">
+                <h1>新進會員註冊</h1>
+                <div class="listview">
+                    <div class="listviewentry">
+                        <div class="listviewlabel">Facebook：</div>
+                        <div class="listviewinput" id="page_profile_fb">
+                            <a target="_blank"></a>
+                        </div>
+                    </div>
+                    <div class="listviewentry">
+                        <div class="listviewlabel">姓名：</div>
+                        <div class="listviewinput">
+                            <input type="text" id="page_profile_name" />
+                        </div>
+                    </div>
+                    <div class="listviewentry">
+                        <div class="listviewlabel">PTT1 ID：</div>
+                        <div class="listviewinput">
+                            <input type="text" id="page_profile_ptt1id" onkeyup="return inputValidAlpha($(this), value)" />
+                        </div>
+                    </div>
+                    <div class="listviewentry">
+                        <div class="listviewlabel">PTT2 ID：</div>
+                        <div class="listviewinput">
+                            <input type="text" id="page_profile_ptt2id" onkeyup="return inputValidAlpha($(this), value)" />
+                        </div>
+                    </div>
+                    <div class="listviewentry">
+                        <div class="listviewlabel">聯絡電話：</div>
+                        <div class="listviewinput">
+                            <input type="text" id="page_profile_tel" onkeyup="return inputValidNumber($(this), value)" />
+                        </div>
+                    </div>
+                    <div class="listviewentry">
+                        <div class="listviewlabel">E-mail：</div>
+                        <div class="listviewinput">
+                            <input type="text" id="page_profile_email" onkeyup="return inputValidEmail($(this), value)" />
+                        </div>
+                    </div>
+                </div>
+                <div id="signup">  
+                    <input type="submit" value="註冊" />
+                </div>
+                <div id="message"></div>
             </div>
         </div>
 

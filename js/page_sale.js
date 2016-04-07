@@ -7,5 +7,5 @@ $(document).keypress(function(e) {
 $(document).ready(function(){
     initSearchBar(false);
     submitListener(false);
-    menuLoginState(true);
+    getLoginState(true, false);
 });

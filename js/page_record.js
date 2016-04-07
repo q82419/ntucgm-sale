@@ -1,3 +1,3 @@
 $(document).ready(function(){
-    menuLoginState(false);
+    getLoginState(false, false);
 });

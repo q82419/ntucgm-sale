@@ -5,22 +5,26 @@ $(document).keypress(function(e) {
 });
 
 function recvData(data){
-    $('#page_profile_fb a').html('https://www.facebook.com/' + data['fbid']);
-    $('#page_profile_fb a').attr('href', 'https://www.facebook.com/' + data['fbid']);
-    $('#page_profile_name').val(data['name']);
-    $('#page_profile_ptt1id').val(data['ptt1id']);
-    $('#page_profile_ptt2id').val(data['ptt2id']);
-    $('#page_profile_tel').val(data['tel']);
-    $('#page_profile_email').val(data['email']);
-    if(data['permission'] == 0)
-        $('#page_profile_permission').html('一般社員');
-    else if(data['permission'] == 1)
-        $('#page_profile_permission').html('管理人員');
-    else if(data['permission'] == 2)
-        $('#page_profile_permission').html('系統管理員');
-    $('#content_main').show();
-    $('#content_prepare').hide();
-    $('#signup input').removeAttr('disabled');
+    if(data['status'] == '1'){
+        FB.getLoginStatus(function(response) {
+            if(response.status === 'connected') {
+                // A fb account logged in, try to pass access token for ntucgmid
+                $('#page_profile_fb a').html('https://www.facebook.com/' + response.authResponse.userID);
+                $('#page_profile_fb a').attr('href', 'https://www.facebook.com/' + response.authResponse.userID);
+                $('#content_main').show();
+                $('#content_prepare').hide();
+                $('#signup input').removeAttr('disabled');
+            }
+            else
+                $(location).attr("href", "notlogin.html");
+        });
+    }
+    else if(data['status'] == '0' || data['status'] == '2')
+        $(location).attr("href", "/");
+    else if(data['status'] == '3')
+        $(location).attr("href", "notauthorized.html");
+    else if(data['status'] == '4')
+        $(location).attr("href", "notallowed.html");
 }
 
 function checkData(callback){
@@ -45,10 +49,10 @@ function checkData(callback){
 function transData(){
     $('#signup input').attr('disabled','disabled');
     $('#message').html("帳號驗證中......");
-    getLoginState(false, true, function(data){
-        if(JSON.parse(JSON.stringify(data))['status'] == '0'){
-            $('#message').html("資料儲存中......");
-            var dataset = {'uid': JSON.parse(JSON.stringify(data))["uid"],
+    getLoginState(false, false, function(data){
+        if(JSON.parse(JSON.stringify(data))['status'] == '1'){
+            $('#message').html("註冊處理中......");
+            var dataset = {'fbid': JSON.parse(JSON.stringify(data))["fbid"],
                            'name': $('#page_profile_name').val(),
                            'ptt1id': $('#page_profile_ptt1id').val(),
                            'ptt2id': $('#page_profile_ptt2id').val(),
@@ -56,11 +60,11 @@ function transData(){
                            'email': $('#page_profile_email').val()};
             connectServer('POST',
                           JSON.stringify(dataset),
-                          'profile',
+                          'register',
                           function(data){
                 var stat = JSON.parse(JSON.stringify(data))["status"];
                 if(parseInt(stat) == 0)
-                    $('#message').html("資料變更成功");
+                    $(location).attr("href", "notauthorized.html");
                 else
                     $('#message').html("不明原因失敗");
             });
@@ -74,7 +78,7 @@ function transData(){
 function submitData(){
     checkData(function(res){
         $('#message').html(res);
-        if(res == "" && confirm("確定要儲存您的個人資訊嗎？"))
+        if(res == "")
             transData();
     });
 }
@@ -82,7 +86,7 @@ function submitData(){
 
 $(document).ready(function(){
     $('#content_main').hide();
-    $('#signup input').attr('disabled','disabled');
-    getLoginState(true, true, recvData);
+    $('#signup input').attr('disabled', 'disabled');
+    getLoginState(false, true, recvData);
     $('#signup input').click(submitData);
 });

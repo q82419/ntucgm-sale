@@ -4,6 +4,7 @@
         <meta http-equiv="content-type" content="text/html" charset="utf-8" />
         <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
         <script type="text/javascript" src="js/fblogin.js"></script>
+        <script type="text/javascript" src="js/connect.js"></script>
         <script type="text/javascript" src="js/page_profile.js"></script>
         <link href="css/style.css" rel="stylesheet" type="text/css" />
         <link href="css/menu.css" rel="stylesheet" type="text/css" />
@@ -34,13 +35,16 @@
 
         <!-- Page Content -->
         <div id="content">
-            <div class="panel panel_ext0">
+            <div class="panel panel_ext0" id="content_prepare">
+                <br><br><h1>讀取中，請稍候......</h1><br><br>
+            </div>
+            <div class="panel panel_ext0" id="content_main">
                 <h1>編輯會員資料</h1>
                 <div class="listview">
                     <div class="listviewentry">
                         <div class="listviewlabel">Facebook：</div>
-                        <div class="listviewinput">
-                            <a href="#">https://www.facebook.com/XXXXXXX</a>
+                        <div class="listviewinput" id="page_profile_fb">
+                            <a target="_blank"></a>
                         </div>
                     </div>
                     <div class="listviewentry">
@@ -52,25 +56,25 @@
                     <div class="listviewentry">
                         <div class="listviewlabel">PTT1 ID：</div>
                         <div class="listviewinput">
-                            <input type="text" id="page_profile_ptt1id" />
+                            <input type="text" id="page_profile_ptt1id" onkeyup="return inputValidAlpha($(this), value)" />
                         </div>
                     </div>
                     <div class="listviewentry">
                         <div class="listviewlabel">PTT2 ID：</div>
                         <div class="listviewinput">
-                            <input type="text" id="page_profile_ptt2id" />
+                            <input type="text" id="page_profile_ptt2id" onkeyup="return inputValidAlpha($(this), value)" />
                         </div>
                     </div>
                     <div class="listviewentry">
                         <div class="listviewlabel">聯絡電話：</div>
                         <div class="listviewinput">
-                            <input type="text" id="page_profile_tel" />
+                            <input type="text" id="page_profile_tel" onkeyup="return inputValidNumber($(this), value)" />
                         </div>
                     </div>
                     <div class="listviewentry">
                         <div class="listviewlabel">E-mail：</div>
                         <div class="listviewinput">
-                            <input type="text" id="page_profile_email" />
+                            <input type="text" id="page_profile_email" onkeyup="return inputValidEmail($(this), value)" />
                         </div>
                     </div>
                     <div class="listviewentry">
@@ -83,6 +87,7 @@
                 <div id="signup">  
                     <input type="submit" value="確定變更" />
                 </div>
+                <div id="message"></div>
             </div>
         </div>
 

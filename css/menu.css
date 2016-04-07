@@ -44,9 +44,6 @@
 #menuinner ul li a {
     width: 60px;
 }
-#menuinner #menulogin a {
-    width: 40px;
-}
 #menuinner #menulogname, #menuinner #menulogin a{
     background: #404040;
 }
