@@ -28,10 +28,16 @@ function checkData(callback){
     var re = new RegExp(regu);
     if($('#page_profile_name').val() == "")
         callback("姓名欄位不得為空白");
+    else if($('#page_profile_name').val().indexOf('"') != -1 || $('#page_profile_name').val().indexOf('\\') != -1 || $('#page_profile_name').val().indexOf("'") != -1)
+        callback("姓名欄位不得有特殊字元");
     else if($('#page_profile_ptt1id').val() == "")
         callback("PTT1 ID不得為空白");
+    else if($('#page_profile_ptt1id').val().length > 12 || $('#page_profile_ptt1id').val().length < 4)
+        callback("PTT1 ID的長度必須在4~12之間");
     else if($('#page_profile_ptt2id').val() == "")
         callback("PTT2 ID不得為空白");
+    else if($('#page_profile_ptt2id').val().length > 12 || $('#page_profile_ptt2id').val().length < 4)
+        callback("PTT2 ID的長度必須在4~12之間");
     else if($('#page_profile_tel').val() == "")
         callback("聯絡電話欄位不得為空白");
     else if($('#page_profile_email').val() == "")

@@ -32,6 +32,8 @@ function checkData(callback){
     var re = new RegExp(regu);
     if($('#page_profile_name').val() == "")
         callback("姓名欄位不得為空白");
+    else if($('#page_profile_name').val().indexOf('"') != -1 || $('#page_profile_name').val().indexOf('\\') != -1 || $('#page_profile_name').val().indexOf("'") != -1)
+        callback("姓名欄位不得有特殊字元");
     else if($('#page_profile_ptt1id').val() == "")
         callback("PTT1 ID不得為空白");
     else if($('#page_profile_ptt2id').val() == "")
